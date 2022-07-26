@@ -1,7 +1,7 @@
 # Личный проект «Мишка» 
 
 * Студент: [Юлия Дорошина](https://up.htmlacademy.ru/adaptive/26/user/610981).
-* Наставник: [Сергей Артёмов] (https://htmlacademy.ru/profile/firefoxic).
+* Наставник: [Сергей Артёмов](https://htmlacademy.ru/profile/firefoxic).
 
 ---
 
