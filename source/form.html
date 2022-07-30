@@ -3,7 +3,32 @@
 {% extends "./templates/_layout.twig" %}
 
 {% block main %}
-<main>
-	Контент страницы формы
+<main class="custom">
+	<header class="custom__header hero">
+		<h1 class="hero__title heading">Вязание на заказ</h1>
+	</header>
+	<section class="custom__order">
+		<h2 class="visually-hidden">Форма заказа изделия.</h2>
+		<p class="custom__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+		<form class="custom__form order-form" method="post" action="https://echo.htmlacademy.ru/">
+			<fieldset class="order-form__group">
+				<legend class="order-form__title">Тип</legend>
+				<ul class="control-container order-form__list order-form__radio">
+					<li class="order-form__item">
+						<label class="control radio">
+							<input class="visually-hidden control__input" type="radio" name="product-type" value="accessories" checked>
+							<span class="control__icon"></span>
+							<span class="control__label">Аксессуар для интерьера</span>
+						</label>
+						<label class="control radio">
+							<input class="visually-hidden control__input" type="radio" name="product-type" value="toys">
+							<span class="control__icon"></span>
+							<span class="control__label">Детская игрушка</span>
+						</label>
+					</li>
+				</ul>
+			</fieldset>
+		</form>
+	</section>
 </main>
 {% endblock %}
