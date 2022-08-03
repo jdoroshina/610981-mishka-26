@@ -1,0 +1,32 @@
+.button {
+	display: inline-block;
+	width: 100%;
+	min-height: 52px;
+	font-family: inherit;
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: 700;
+	text-align: center;
+	color: var(--base-color);
+	background-color: var(--major-color);
+	border: 2px solid var(--base-color);
+	transform: translateZ(0);
+	text-decoration: none;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.button--accent-color {
+	color: var(--major-color);
+	background-color: var(--light-accent-color);
+}
+
+.button--small {
+	font-size: 17px;
+	line-height: 16px;
+}
+
+.button--compact {
+	font-size: 18px;
+	line-height: 16px;
+}
