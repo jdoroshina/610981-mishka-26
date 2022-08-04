@@ -1,0 +1,17 @@
+.order-form__title {
+	color: var(--light-accent-color);
+}
+
+.order-form__list {
+	margin: 0;
+	padding: 0;
+
+	&::marker {
+		opacity: 0;
+	}
+}
+
+.order-form__note {
+	font-size: 14px;
+	line-height: 16px;
+}
