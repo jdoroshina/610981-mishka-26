@@ -1,0 +1,12 @@
+.features__list {
+	margin: 0;
+	padding: 0;
+
+	&::marker {
+		opacity: 0;
+	}
+}
+
+.features__link {
+	color: var(--major-color);
+}
