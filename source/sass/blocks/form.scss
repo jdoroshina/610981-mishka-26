@@ -1,0 +1,13 @@
+.form__item {
+	&::marker {
+		color: transparent;
+	}
+}
+
+.form__label {
+	font-weight: 700;
+	font-size: 17px;
+	line-height: 16px;
+	text-align: center;
+	text-transform: uppercase;
+}
