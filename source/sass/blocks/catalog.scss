@@ -1,8 +1,10 @@
 .catalog__list {
 	margin: 0;
 	padding: 0;
+}
 
+.catalog__item {
 	&::marker {
-		opacity: 0;
+		color: transparent;
 	}
 }

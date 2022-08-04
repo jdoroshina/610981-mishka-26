@@ -1,8 +1,10 @@
 .advantages__list {
 	margin: 0;
 	padding: 0;
+}
 
+.advantages-item {
 	&::marker {
-		opacity: 0;
+		color: transparent;
 	}
 }

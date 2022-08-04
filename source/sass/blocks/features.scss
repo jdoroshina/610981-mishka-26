@@ -1,9 +1,11 @@
 .features__list {
 	margin: 0;
 	padding: 0;
+}
 
+.features__item {
 	&::marker {
-		opacity: 0;
+		color: transparent;
 	}
 }
 

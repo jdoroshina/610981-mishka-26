@@ -5,9 +5,11 @@
 .order-form__list {
 	margin: 0;
 	padding: 0;
+}
 
+.order-form__item {
 	&::marker {
-		opacity: 0;
+		color: transparent;
 	}
 }
 

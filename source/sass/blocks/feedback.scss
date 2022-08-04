@@ -1,8 +1,10 @@
 .feedback__list {
 	margin: 0;
 	padding: 0;
+}
 
+.feedback__item {
 	&::marker {
-		opacity: 0;
+		color: transparent;
 	}
 }
