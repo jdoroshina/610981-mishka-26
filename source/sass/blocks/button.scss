@@ -11,28 +11,28 @@
 	text-decoration: none;
 	text-transform: uppercase;
 	cursor: pointer;
-}
 
-.button--main {
-	width: 100%;
-	min-height: 52px;
-	border: 2px solid var(--base-color);
-}
+	&--main {
+		width: 100%;
+		min-height: 52px;
+		border: 2px solid var(--base-color);
+	}
 
-.button--accent {
-	width: 100%;
-	min-height: 52px;
-	color: var(--major-color);
-	background-color: var(--light-accent-color);
-	border: 2px solid var(--light-accent-color);
-}
+	&--accent {
+		width: 100%;
+		min-height: 52px;
+		color: var(--major-color);
+		background-color: var(--light-accent-color);
+		border: 2px solid var(--light-accent-color);
+	}
 
-.button--small {
-	font-size: 17px;
-	line-height: 16px;
-}
+	&--small {
+		font-size: 17px;
+		line-height: 16px;
+	}
 
-.button--compact {
-	font-size: 18px;
-	line-height: 16px;
+	&--compact {
+		font-size: 18px;
+		line-height: 16px;
+	}
 }

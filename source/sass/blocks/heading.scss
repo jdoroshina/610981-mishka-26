@@ -1,44 +1,44 @@
 .heading {
 	font-weight: 700;
 	color: var(--main-color);
-}
 
-.heading--level_1 {
-	font-size: 27px;
-	line-height: 30px;
-}
+	&--level_1 {
+		font-size: 27px;
+		line-height: 30px;
+	}
 
-.heading--level_2 {
-	font-size: 25px;
-	line-height: 30px;
-}
+	&--level_2 {
+		font-size: 25px;
+		line-height: 30px;
+	}
 
-.heading--level_3 {
-	font-size: 19px;
-	line-height: 24px;
-}
+	&--level_3 {
+		font-size: 19px;
+		line-height: 24px;
+	}
 
-.heading--level_4 {
-	font-size: 19px;
-	line-height: 18px;
-}
+	&--level_4 {
+		font-size: 19px;
+		line-height: 18px;
+	}
 
-.heading--level_5 {
-	font-size: 17px;
-	line-height: 24px;
-}
+	&--level_5 {
+		font-size: 17px;
+		line-height: 24px;
+	}
 
-.heading--level_6 {
-	font-size: 17px;
-	line-height: 20px;
-}
+	&--level_6 {
+		font-size: 17px;
+		line-height: 20px;
+	}
 
-.heading--level_7 {
-	font-size: 17px;
-	line-height: 18px;
-}
+	&--level_7 {
+		font-size: 17px;
+		line-height: 18px;
+	}
 
-.heading--level_8 {
-	font-size: 17px;
-	line-height: 16px;
+	&--level_8 {
+		font-size: 17px;
+		line-height: 16px;
+	}
 }

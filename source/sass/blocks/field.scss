@@ -3,11 +3,9 @@
 	font-size: 19px;
 	line-height: 18px;
 	color: var(--base-color);
-}
 
-.field__input::placeholder {
-	font-size: 17px;
-	line-height: 18px;
-	color: var(--main-color);
-	opacity: 0.3;
+	&::placeholder {
+		color: var(--main-color);
+		opacity: 0.3;
+	}
 }
