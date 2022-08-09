@@ -18,6 +18,23 @@
 		width: 1050px;
 		margin: 0 auto;
 	}
+
+	&--only-mobile_on {
+		@media (--not-mobile) {
+			display: contents;
+		}
+	}
+
+	&--only-mobile_off {
+		@media (--mobile-only) {
+			display: contents;
+		}
+
+		@media (--desktop-only) {
+			width: 1050px;
+			margin: 0 auto;
+		}
+	}
 }
 
 .page__body {
