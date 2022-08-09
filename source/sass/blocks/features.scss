@@ -1,8 +1,11 @@
 .features__list {
-	display: flex;
-	flex-direction: column;
+	display: grid;
 	margin: 0;
 	padding: 0;
+
+	@media (--not-mobile) {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
 
 .features__item {
@@ -13,8 +16,12 @@
 
 .features__link {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: min-content 1fr;
 	color: var(--major-color);
+
+	@media (--desktop-only) {
+		grid-template-columns: min-content 1fr 1fr;
+	}
 }
 
 .features__accessories {
@@ -29,4 +36,10 @@
 	padding-top: 24px;
 	padding-bottom: 31px;
 	padding-left: 30px;
+
+	@media (--not-mobile) {
+		padding-top: 25px;
+		padding-bottom: 34px;
+		padding-left: 37px;
+	}
 }
