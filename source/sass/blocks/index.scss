@@ -2,4 +2,14 @@
 	min-height: 282px;
 	background-image: url("../../img/hero-mobile@2x1.jpg");
 	background-repeat: no-repeat;
+
+	@media (--tablet-only) {
+		min-height: 561px;
+		background-image: url("");
+	}
+
+	@media (--desktop-only) {
+		min-height: 564px;
+		background-image: url("");
+	}
 }
