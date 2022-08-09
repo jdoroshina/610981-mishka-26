@@ -1,4 +1,6 @@
 .features__list {
+	display: flex;
+	flex-direction: column;
 	margin: 0;
 	padding: 0;
 }
@@ -10,6 +12,8 @@
 }
 
 .features__link {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 	color: var(--major-color);
 }
 
@@ -19,4 +23,10 @@
 
 .features__toys {
 	background-color: var(--dark-accent-color);
+}
+
+.features__text {
+	padding-top: 24px;
+	padding-bottom: 31px;
+	padding-left: 30px;
 }
