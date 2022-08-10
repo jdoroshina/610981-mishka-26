@@ -5,11 +5,12 @@
 
 	@media (--tablet-only) {
 		grid-template-columns: repeat(4, 1fr);
-		grid-template-rows: repeat(5, 1fr);
+		grid-template-rows: repeat(5, auto);
 	}
 
 	@media (--desktop-only) {
 		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: repeat(5, auto);
 	}
 }
 
