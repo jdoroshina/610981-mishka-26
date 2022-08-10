@@ -1,10 +1,25 @@
 .advantages__list {
+	display: grid;
 	margin: 0;
 	padding: 0;
+
+	@media (--not-mobile) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media (--desktop-only) {
+		padding: 0 175px;
+	}
 }
 
 .advantages__item {
 	&::marker {
 		color: transparent;
+	}
+
+	@media (--mobile-only) {
+		&:nth-of-type(2n + 2) {
+			order: 1;
+		}
 	}
 }
