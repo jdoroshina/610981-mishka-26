@@ -35,6 +35,18 @@
 			margin: 0 auto;
 		}
 	}
+
+	&--only-desktop_on {
+		@media (--not-desktop) {
+			display: contents;
+		}
+	}
+
+	&--only-desktop_off {
+		@media (--desktop-only) {
+			display: contents;
+		}
+	}
 }
 
 .page__body {
