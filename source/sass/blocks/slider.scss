@@ -1,0 +1,8 @@
+.slider__item {
+	visibility: hidden;
+
+	&--current {
+		z-index: 1;
+		visibility: visible;
+	}
+}
