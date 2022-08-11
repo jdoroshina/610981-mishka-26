@@ -1,3 +1,19 @@
+.contacts {
+	display: grid;
+
+	@media (--desktop-only) {
+		grid-template-columns: repeat(2, 1fr);
+		padding-left: 175px;
+	}
+}
+
+.contacts__list {
+	@media (--tablet-only) {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
 .contacts__name {
 	line-height: 30px;
 }
