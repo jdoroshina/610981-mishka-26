@@ -1,3 +1,20 @@
+.card {
+	display: grid;
+
+	@media (--tablet-only) {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+	}
+}
+
+.card__link-image {
+	order: -1;
+
+	@media (--tablet-only) {
+		grid-row: 1 / -1;
+	}
+}
+
 .card__description {
 	font-size: 13px;
 	line-height: 30px;
