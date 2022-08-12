@@ -1,6 +1,17 @@
 .catalog__list {
+	display: grid;
+	gap: 30px;
 	margin: 0;
 	padding: 0;
+
+	@media (--tablet-only) {
+		gap: 54px;
+	}
+
+	@media (--desktop-only) {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 51px;
+	}
 }
 
 .catalog__item {
