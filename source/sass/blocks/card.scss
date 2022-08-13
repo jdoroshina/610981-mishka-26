@@ -20,6 +20,11 @@
 	line-height: 30px;
 }
 
+.card__inner {
+	display: flex;
+	justify-content: space-between;
+}
+
 .card__price {
 	font-weight: 700;
 	color: var(--main-color);
