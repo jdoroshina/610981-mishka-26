@@ -1,3 +1,22 @@
-.production__text {
+.production {
+	display: grid;
+
+	@media (--desktop-only) {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+	}
+}
+
+.production__link {
+	@media (--not-mobile) {
+		order: -1;
+	}
+
+	@media (--desktop-only) {
+		grid-row: 1 / -1;
+	}
+}
+
+.production__description {
 	font-size: 13px;
 }
