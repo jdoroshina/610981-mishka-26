@@ -9,9 +9,9 @@
 	</header>
 	<section class="custom__order">
 		<h2 class="page__hidden">Форма заказа изделия</h2>
-		<p class="custom__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+		<p class="custom__text page__centerer">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
 		<form class="custom__form order-form" method="post" action="https://echo.htmlacademy.ru/">
-			<fieldset class="order-form__group">
+			<fieldset class="order-form__group page__centerer">
 				<legend class="order-form__title heading heading--level_8">Тип</legend>
 				<ul class="control-container order-form__list order-form__radio">
 					<li class="order-form__item">
@@ -30,7 +30,7 @@
 					</li>
 				</ul>
 			</fieldset>
-			<fieldset class="order-form__group">
+				<fieldset class="order-form__group page__centerer">
 				<legend class="order-form__title heading heading--level_8">Цвет</legend>
 				<ul class="control-container order-form__list order-form__checkbox">
 					<li class="order-form__item">
@@ -77,7 +77,7 @@
 					</li>
 				</ul>
 			</fieldset>
-			<fieldset class="order-form__group">
+			<fieldset class="order-form__group page__centerer">
 				<legend class="order-form__title heading heading--level_8">Фио</legend>
 				<p class="order-form__field-group field">
 					<label class="field__label heading heading--level_7" for="user-name">Имя:</label>
@@ -92,20 +92,22 @@
 					<input class="field__input" type="text" id="user-patronymic" name="user-patronymic" placeholder="Отчество, если желаете">
 				</p>
 			</fieldset>
-				<p class="order-form__group field">
+				<p class="order-form__group field page__centerer">
 					<label class="order-form__title heading heading--level_8" for="user-phone">Тел</label>
 					<input class="field__input" type="tel" id="user-phone" name="user-phone" pattern="+7 [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
 				</p>
-				<p class="order-form__group field">
+				<p class="order-form__group field page__centerer">
 					<label class="order-form__title heading heading--level_8" for="user-email">E-mail</label>
 					<input class="field__input" type="email" id="user-email" name="user-phone" placeholder="Ваш Email*" required>
 				</p>
-				<p class="order-form__group field">
+			<p class="order-form__group field page__centerer">
 					<label class="order-form__title heading heading--level_8" for="user-message">Доп</label>
 					<textarea class="field__input" id="user-message" rows="7" placeholder="Опишите все ваши пожелания к заказу"></textarea>
 				</p>
+			<div class="order-form__container page__centerer">
 			<span class="order-form__note"><sup>*</sup>Поля обязательны для заполнения</span>
 			<button class="order-form__submit button button--main button--small" type="submit">Отправить заказ</button>
+			</div>
 		</form>
 	</section>
 </main>
