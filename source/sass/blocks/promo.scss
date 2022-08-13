@@ -40,7 +40,7 @@
 	}
 }
 
-.promo__text {
+.promo__description p {
 	@media (--tablet-only) {
 		grid-column: 1 / span 2;
 	}
@@ -50,7 +50,7 @@
 	}
 }
 
-.promo__details-list {
+.promo__description dl {
 	line-height: 20px;
 
 	@media (--tablet-only) {
