@@ -8,8 +8,9 @@
 
 	@media (--desktop-only) {
 		grid-template-columns: repeat(5, 1fr);
-		grid-template-rows: repeat(2, auto);
+		grid-template-rows: repeat(4, auto);
 		padding-left: 175px;
+		box-sizing: border-box;
 		background-image: url("../../img/background-feedback.jpg");
 		background-repeat: no-repeat;
 	}
@@ -41,7 +42,7 @@
 .feedback__buttons {
 	@media (--not-mobile) {
 		grid-column: -2 / -1;
-		grid-row: 2 / -1;
+		grid-row: -2 / -1;
 	}
 }
 

@@ -1,11 +1,13 @@
 .slider__list {
 	display: grid;
+	grid-template-columns: repeat(5, auto);
+	grid-template-rows: repeat(3, auto);
 }
 
 .slider__item {
 	visibility: hidden;
-	grid-column: 1 / 2;
-	grid-row: 1 / 2;
+	grid-column: 1 / -1;
+	grid-row: 1 / -1;
 
 	&--current {
 		z-index: 1;
