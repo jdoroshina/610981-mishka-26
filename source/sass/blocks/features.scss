@@ -28,6 +28,28 @@
 	@media (--desktop-only) {
 		grid-template-columns: min-content 1fr 1fr;
 	}
+
+	&:hover {
+		--icon-opacity: 0.7;
+		--button-light-background: var(--extra-light-accent-color);
+		--button-dark-background: var(--extra-dark-accent-color);
+		margin-top: -5px;
+	}
+
+	&:active {
+		--icon-opacity: 0.3;
+		--button-light-background: var(--extra-light-accent-color);
+		--button-dark-background: var(--extra-dark-accent-color);
+	}
+
+	&--button_light {
+		background-color: var(--button-light-background, var(--light-accent-color));
+	}
+
+	&--button_dark {
+		background-color: var(--button-dark-background, var(--dark-accent-color));
+	}
+
 	&::after {
 		content: "";
 		grid-column: span 1 / -1;
