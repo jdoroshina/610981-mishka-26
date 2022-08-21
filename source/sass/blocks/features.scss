@@ -28,14 +28,32 @@
 	@media (--desktop-only) {
 		grid-template-columns: min-content 1fr 1fr;
 	}
+	&::after {
+		content: "";
+		grid-column: span 1 / -1;
+		align-self: center;
+		justify-self: end;
+		background-color: var(--accidental-accent-color);
+		outline: 2px dashed;
+		outline-offset: -2px;
+		opacity: var(--icon-opacity, 0.5);
+	}
 }
 
 .features__accessories {
-	background-color: var(--light-accent-color);
+	&::after {
+		width: 40px;
+		height: 62px;
+		margin-right: 36px;
+	}
 }
 
 .features__toys {
-	background-color: var(--dark-accent-color);
+	&::after {
+		width: 60px;
+		height: 60px;
+		margin-right: 31px;
+	}
 }
 
 .features__text {
