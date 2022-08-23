@@ -1,8 +1,11 @@
 .button {
+	--font-size: 18px;
+	--line-height: 20px;
+
 	display: inline-block;
 	font-family: inherit;
-	font-size: 18px;
-	line-height: 20px;
+	font-size: var(--font-size);
+	line-height: var(--line-height);
 	font-weight: 700;
 	text-align: center;
 	color: var(--base-color);
@@ -11,10 +14,15 @@
 	text-decoration: none;
 	text-transform: uppercase;
 
+
 	&--main {
 		width: 100%;
 		min-height: 52px;
 		border: 2px solid var(--base-color);
+
+		@media (--not-mobile) {
+			--font-size: 17px;
+		}
 	}
 
 	&--accent {
@@ -26,12 +34,16 @@
 	}
 
 	&--small {
-		font-size: 17px;
-		line-height: 16px;
+		--font-size: 17px;
+		--line-height: 16px;
 	}
 
 	&--compact {
-		font-size: 18px;
-		line-height: 16px;
+		font-size: var(--font-size);
+		--line-height: 16px;
+
+		@media (--not-mobile) {
+			--font-size: 17px;
+		}
 	}
 }
