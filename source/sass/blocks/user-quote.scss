@@ -1,5 +1,25 @@
 .user-quote__text {
+	margin: 7px 0 22px 0;
 	line-height: 30px;
+
+	@media (--not-mobile) {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+}
+
+.user-quote__author {
+	margin: 11px 0;
+
+	@media (--tablet-only) {
+		margin-top: 41px;
+		margin-bottom: 45px;
+	}
+
+	@media (--desktop-only) {
+		margin-top: 24px;
+		margin-bottom: 24px;
+	}
 }
 
 .user-quote__link {
