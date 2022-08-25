@@ -3,3 +3,15 @@
 		color: transparent;
 	}
 }
+
+.social__link {
+	&::before {
+		content: "";
+		display: block;
+		width: 28px;
+		height: 26px;
+		outline: 2px dashed;
+		outline-offset: -2px;
+		background-color: #231f20;
+	}
+}
