@@ -20,6 +20,7 @@
 }
 
 .contacts__title {
+	position: relative;
 	margin-top: 20px;
 	margin-bottom: 18px;
 
@@ -35,12 +36,22 @@
 
 	&::after {
 		content: "";
-		display: inline-block;
-		justify-self: end;
 		width: 47px;
 		height: 81px;
 		outline: 2px dashed;
 		outline-offset: -2px;
+
+		@media (--tablet-only) {
+			position: absolute;
+			right: 50px;
+			bottom: -15px;
+		}
+
+		@media (--desktop-only) {
+			position: absolute;
+			left: -64px;
+			top: -15px;
+		}
 	}
 }
 
@@ -95,6 +106,12 @@
 
 .contacts__map {
 	display: block;
+}
+
+.contacts__button-wrapper {
+	@media (--tablet-only) {
+		margin: 0 auto;
+	}
 }
 
 .contacts__button {
