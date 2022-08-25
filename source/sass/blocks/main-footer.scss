@@ -1,8 +1,18 @@
 .main-footer {
+	padding: 15px 0;
+	background-color: var(--minor-color);
+
+	@media (--not-mobile) {
+		padding-top: 51px;
+		padding-bottom: 58px;
+	}
+}
+
+.main-footer__container {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	background-color: var(--minor-color);
+	align-items: center;
 
 	@media (--not-mobile) {
 		flex-direction: row;
@@ -13,12 +23,11 @@
 	display: none;
 
 	@media (--not-mobile) {
-		display: block;
+		display: flex;
 	}
 
 	&::before {
 		content: "";
-		display: block;
 		width: 102px;
 		height: 34px;
 		outline: 2px dashed;
