@@ -9,15 +9,48 @@
 }
 
 .form__item {
+	position: relative;
+
 	&::marker {
 		color: transparent;
 	}
 }
 
+.form__control {
+	display: grid;
+}
+
+.form__input {
+	margin: 0;
+	appearance: none;
+
+	@media (--not-mobile) {
+		--radio-input-width: 112px;
+	}
+
+	&:checked {
+		--checked-radio-border-color: var(--light-accent-color);
+	}
+
+	&::before {
+		content: "";
+		display: block;
+		width: var(--radio-input-width, 82px);
+		height: 52px;
+		border: 2px solid var(--checked-radio-border-color, rgb(68, 68, 68, 0.1));
+		box-sizing: border-box;
+	}
+}
+
 .form__label {
+	position: absolute;
+	bottom: 50%;
+	left: 50%;
 	font-weight: 700;
 	font-size: 17px;
 	line-height: 16px;
 	text-align: center;
 	text-transform: uppercase;
+	transform: translate(-50%, 50%);
+}
 }
