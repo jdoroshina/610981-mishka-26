@@ -1,4 +1,14 @@
+.modal {
+	display: none;
+
+	&--active {
+		display: block;
+	}
+}
+
 .modal__content {
+	position: relative;
+	margin: auto;
 	text-align: center;
 	background-color: var(--major-color);
 	border-top: 1px solid #c6c6c6;
