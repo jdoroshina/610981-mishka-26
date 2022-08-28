@@ -1,9 +1,10 @@
 .card {
 	display: grid;
+	border: 1px solid var(--additional-color);
 
 	@media (--tablet-only) {
 		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: repeat(3, 1fr);
+		border-bottom: 1px solid var(--additional-color);
 	}
 }
 
@@ -15,6 +16,11 @@
 	}
 }
 
+.card__image {
+	display: block;
+	background-color: var(--additional-color);
+}
+
 .card__description {
 	font-size: 13px;
 	line-height: 30px;
@@ -23,6 +29,7 @@
 .card__inner {
 	display: flex;
 	justify-content: space-between;
+	border-top: 1px solid var(--additional-color);
 }
 
 .card__price {
