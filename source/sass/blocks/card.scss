@@ -1,11 +1,26 @@
 .card {
+	--card-content-margin: 28px;
+
 	display: grid;
 	border: 1px solid var(--additional-color);
 
 	@media (--tablet-only) {
+		--card-content-margin: 33px;
 		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: auto auto 1fr auto;
 		border-bottom: 1px solid var(--additional-color);
 	}
+
+	@media (--desktop-only) {
+		--card-content-margin: 30px;
+	}
+}
+
+.card__title {
+	margin-top: 28px;
+	margin-right: var(--card-content-margin);
+	margin-bottom: 5px;
+	margin-left: var(--card-content-margin);
 }
 
 .card__link-image {
@@ -22,14 +37,28 @@
 }
 
 .card__description {
+	margin: 0 var(--card-content-margin);
 	font-size: 13px;
 	line-height: 30px;
+
+	& p {
+		margin-top: 0;
+		margin-bottom: 18px;
+	}
 }
 
 .card__inner {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+	margin: 0 var(--card-content-margin);
+	padding-top: 22px;
+	padding-bottom: 26px;
 	border-top: 1px solid var(--additional-color);
+
+	@media (--tablet-only) {
+		grid-row: span 1 / -1;
+	}
 }
 
 .card__price {
