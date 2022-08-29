@@ -3,7 +3,13 @@
 
 	@media (--desktop-only) {
 		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: repeat(3, 1fr);
+	&::before {
+		content: "";
+		width: 32px;
+		height: 22px;
+		background-color: var(--light-accent-color);
+		outline: 2px dashed;
+		outline-offset: -2px;
 	}
 }
 
