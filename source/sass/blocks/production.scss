@@ -1,5 +1,6 @@
 .production {
 	display: grid;
+	border: 1px solid var(--additional-color);
 
 	@media (--desktop-only) {
 		grid-template-columns: repeat(2, 1fr);
@@ -21,6 +22,11 @@
 	@media (--desktop-only) {
 		grid-row: 1 / -1;
 	}
+}
+
+.video__image {
+	display: block;
+	background-color: var(--additional-color);
 }
 
 .production__description {
