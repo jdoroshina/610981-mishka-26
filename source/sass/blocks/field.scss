@@ -1,8 +1,26 @@
+.field {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	align-items: center;
+	column-gap: 23px;
+}
+
 .field__input {
+	padding: 17px 0;
 	font-family: var(--main-font);
 	font-size: 17px;
 	line-height: 23px;
 	color: var(--base-color);
+
+	@media (--not-mobile) {
+		padding: 17px;
+		font-size: 19px;
+		line-height: 25px;
+	}
+
+	&--border_full {
+		padding: 17px;
+	}
 
 	&::placeholder {
 		color: var(--main-color);
