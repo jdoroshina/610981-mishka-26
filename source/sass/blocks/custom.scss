@@ -6,11 +6,15 @@
 	@media (--tablet-only) {
 		margin-top: 54px;
 		margin-bottom: 64px;
+		font-size: 17px;
+		line-height: 30px;
 	}
 
 	@media (--desktop-only) {
 		margin-top: 98px;
 		margin-bottom: 63px;
 		padding: 0 175px;
+		font-size: 17px;
+		line-height: 30px;
 	}
 }
