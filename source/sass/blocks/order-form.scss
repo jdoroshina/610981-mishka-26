@@ -71,4 +71,9 @@
 	font-size: 14px;
 	line-height: 16px;
 	order: 1;
+
+	@media (--not-mobile) {
+		font-size: 17px;
+		line-height: 30px;
+	}
 }
