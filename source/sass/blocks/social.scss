@@ -1,5 +1,5 @@
 .social {
-	@media (--mobile-only) {
+	@media #{$mobile-only} {
 		padding-bottom: 18px;
 		border-bottom: 1px solid #e5e5e5;
 	}
@@ -14,7 +14,7 @@
 	margin: 0;
 	padding: 0;
 
-	@media (--mobile-only) {
+	@media #{$mobile-only} {
 		margin: 10px 0;
 	}
 }

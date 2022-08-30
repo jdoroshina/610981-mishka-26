@@ -3,15 +3,15 @@
 	grid-template-columns: 1fr min-content;
 	grid-template-rows: 1fr;
 
-	@media (--not-mobile) {
+	@media #{$not-mobile} {
 		grid-template-rows: repeat(2, 1fr);
 	}
 
-	@media (--tablet-only) {
+	@media #{$tablet-only} {
 		grid-template-columns: repeat(2, auto);
 	}
 
-	@media (--desktop-only) {
+	@media #{$desktop-only} {
 		grid-template-columns: repeat(3, auto);
 	}
 }
@@ -20,7 +20,7 @@
 	grid-column: 1 / 2;
 	grid-row: 1 / span 1;
 
-	@media (--desktop-only) {
+	@media #{$desktop-only} {
 		grid-column: 2 / span 1;
 		grid-row: 1 / span 1;
 	}
@@ -38,7 +38,7 @@
 .main-header__note {
 	display: none;
 
-	@media (--not-mobile) {
+	@media #{$not-mobile} {
 		display: block;
 		grid-column: span 1 / -1;
 		grid-row: 2 / -1;

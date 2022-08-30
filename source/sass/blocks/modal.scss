@@ -16,7 +16,7 @@
 	box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
 	box-sizing: border-box;
 
-	@media (--not-mobile) {
+	@media #{$not-mobile} {
 		max-width: 566px;
 		padding-left: 108px;
 		padding-right: 108px;
@@ -29,7 +29,7 @@
 	margin-bottom: 7px;
 	text-transform: uppercase;
 
-	@media (--not-mobile) {
+	@media #{$not-mobile} {
 		margin-bottom: 4px;
 		font-size: 30px;
 		line-height: 57px;

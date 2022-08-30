@@ -9,7 +9,7 @@
 	line-height: 30px;
 	text-align: center;
 
-	@media (--not-mobile) {
+	@media #{$not-mobile} {
 		font-size: 17px;
 	}
 }
@@ -43,7 +43,7 @@
 	margin: 0;
 	appearance: none;
 
-	@media (--not-mobile) {
+	@media #{$not-mobile} {
 		--radio-input-width: 112px;
 	}
 

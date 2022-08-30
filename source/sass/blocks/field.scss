@@ -16,7 +16,7 @@
 	border-bottom: 2px solid var(--main-color);
 	resize: vertical;
 
-	@media (--not-mobile) {
+	@media #{$not-mobile} {
 		padding: 17px;
 		font-size: 19px;
 		line-height: 25px;

@@ -10,40 +10,40 @@
 .page__centerer {
 	margin: 0 30px;
 
-	@media (--not-mobile) {
+	@media #{$not-mobile} {
 		margin: 0 50px;
 	}
 
-	@media (--desktop-only) {
+	@media #{$desktop-only} {
 		width: 1050px;
 		margin: 0 auto;
 	}
 
 	&--only-mobile_on {
-		@media (--not-mobile) {
+		@media #{$not-mobile} {
 			display: contents;
 		}
 	}
 
 	&--only-mobile_off {
-		@media (--mobile-only) {
+		@media #{$mobile-only} {
 			display: contents;
 		}
 
-		@media (--desktop-only) {
+		@media #{$desktop-only} {
 			width: 1050px;
 			margin: 0 auto;
 		}
 	}
 
 	&--only-desktop_on {
-		@media (--not-desktop) {
+		@media #{$not-desktop} {
 			display: contents;
 		}
 	}
 
 	&--only-desktop_off {
-		@media (--desktop-only) {
+		@media #{$desktop-only} {
 			display: contents;
 		}
 	}

@@ -2,7 +2,7 @@
 	padding: 15px 0;
 	background-color: var(--minor-color);
 
-	@media (--not-mobile) {
+	@media #{$not-mobile} {
 		padding-top: 51px;
 		padding-bottom: 58px;
 	}
@@ -14,7 +14,7 @@
 	justify-content: space-between;
 	align-items: center;
 
-	@media (--not-mobile) {
+	@media #{$not-mobile} {
 		flex-direction: row;
 	}
 }
@@ -22,7 +22,7 @@
 .main-footer__logo {
 	display: none;
 
-	@media (--not-mobile) {
+	@media #{$not-mobile} {
 		display: flex;
 	}
 

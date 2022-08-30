@@ -6,13 +6,11 @@ import twig from "gulp-twig";
 import htmlmin from "gulp-htmlmin";
 import { htmlValidator } from "gulp-w3c-html-validator";
 import bemlinter from "gulp-html-bemlinter";
-import sass from "gulp-dart-sass";
-import svgSprite from "gulp-svg-sprite";
+import dartSass from 'sass';
+import gulpSass from 'gulp-sass';
+import { stacksvg } from "gulp-stacksvg";
 import postcss from "gulp-postcss";
 import postUrl from "postcss-url";
-import postImport from "postcss-import";
-import postScss from "postcss-scss";
-import postCustomMedia from "postcss-custom-media";
 import autoprefixer from "autoprefixer";
 import csso from "postcss-csso";
 import terser from "gulp-terser";
@@ -21,6 +19,8 @@ import { deleteAsync } from "del";
 import gulpIf from "gulp-if";
 
 const { src, dest, watch, series, parallel } = gulp;
+const sass = gulpSass(dartSass);
+
 data.isDevelopment = true;
 
 export function processMarkup() {
@@ -41,15 +41,25 @@ export function validateMarkup(done) {
 }
 
 export function processStyles() {
+	const sassOptions = {
+		functions: {
+			"getbreakpoint($bp)": (bp) => new dartSass.types.Number(data.viewports[bp.getValue()]),
+			"getext($name)": (name) => new dartSass.types.String(data.images[name.getValue()].ext),
+			"getmaxdppx($name)": (name) => new dartSass.types.Number(data.images[name.getValue()].maxdppx),
+			"getviewports($name)": function (name) {
+				let [...vps] = data.images[name.getValue()].viewports;
+				let viewports = new dartSass.types.List(vps.length);
+				vps.reverse().forEach((vp, i) => { viewports.setValue(i, new dartSass.types.String(vp)) });
+				return viewports;
+			}
+		}
+	}
+
 	return src("./source/sass/*.scss", { sourcemaps: data.isDevelopment })
 		.pipe(plumber())
+		.pipe(sass(sassOptions).on("error", sass.logError))
 		.pipe(postcss([
-			postImport(),
-			postUrl(),
-			postCustomMedia()
-		], { syntax: postScss }))
-		.pipe(sass().on("error", sass.logError))
-		.pipe(postcss([
+			postUrl({ assetsPath: "../" }),
 			autoprefixer(),
 			csso()
 		]))
@@ -67,11 +77,6 @@ export function processScripts() {
 export function optimizeImages() {
 	return src("./source/img/**/*.{png,jpg}")
 		.pipe(gulpIf(!data.isDevelopment, squoosh()))
-		.pipe(dest("build/img"))
-}
-
-export function copyImages() {
-	return src("./source/img/**/*.{png,jpg}")
 		.pipe(dest("build/img"))
 }
 
@@ -95,15 +100,9 @@ export function createAvif(done) {
 	}
 }
 
-export function createSprite() {
-	return src("./source/icons/*.svg")
-		.pipe(svgSprite({
-			mode: {
-				stack: {
-					sprite: "../sprite.svg"
-				}
-			},
-		}))
+export function createStack() {
+	return src("./source/icons/**/*.svg")
+		.pipe(stacksvg())
 		.pipe(dest("./build/icons"));
 }
 
@@ -145,7 +144,7 @@ function watchFiles() {
 	watch("./source/sass/**/*.scss", series(processStyles));
 	watch("./source/js/*.js", series(processScripts, reloadServer));
 	watch(["./source/**/*.{html,twig}", "./source/**/_data.js"], series(processMarkup, reloadServer));
-	watch("./source/icons/**/*.svg", series(createSprite, reloadServer));
+	watch("./source/icons/**/*.svg", series(createStack, reloadServer));
 }
 
 export function compileProject(done) {
@@ -153,7 +152,7 @@ export function compileProject(done) {
 		processStyles,
 		processMarkup,
 		processScripts,
-		createSprite,
+		createStack,
 		copyAssets,
 		optimizeImages,
 		createWebp,

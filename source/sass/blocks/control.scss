@@ -14,7 +14,7 @@
 		--pseudo-control-checked: "";
 	}
 
-	@media (--not-mobile) {
+	@media #{$not-mobile} {
 		--control-size: 52px;
 		--control-checked-size: 23px;
 	}

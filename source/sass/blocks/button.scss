@@ -22,7 +22,7 @@
 		padding: 16px 0;
 		border: 2px solid var(--base-color);
 
-		@media (--not-mobile) {
+		@media #{$not-mobile} {
 			--font-size: 17px;
 		}
 	}
@@ -46,7 +46,7 @@
 		font-size: var(--font-size);
 		--line-height: 16px;
 
-		@media (--not-mobile) {
+		@media #{$not-mobile} {
 			--font-size: 17px;
 		}
 	}

@@ -3,7 +3,7 @@
 	font-size: 15px;
 	line-height: 24px;
 
-	@media (--not-mobile) {
+	@media #{$not-mobile} {
 		font-size: 17px;
 		line-height: 30px;
 	}
@@ -12,7 +12,7 @@
 		font-size: 13px;
 		line-height: 30px;
 
-		@media (--not-mobile) {
+		@media #{$not-mobile} {
 			font-size: 15px;
 		}
 	}

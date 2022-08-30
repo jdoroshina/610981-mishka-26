@@ -2,12 +2,12 @@
 	margin-top: 30px;
 	margin-bottom: 30px;
 
-	@media (--tablet-only) {
+	@media #{$tablet-only} {
 		margin-top: 67px;
 		margin-bottom: 53px;
 	}
 
-	@media (--desktop-only) {
+	@media #{$desktop-only} {
 		margin-top: 111px;
 		margin-bottom: 57px;
 	}
@@ -19,11 +19,11 @@
 	margin: 0;
 	padding: 0;
 
-	@media (--tablet-only) {
+	@media #{$tablet-only} {
 		gap: 54px;
 	}
 
-	@media (--desktop-only) {
+	@media #{$desktop-only} {
 		grid-template-columns: repeat(3, 1fr);
 		gap: 51px;
 	}

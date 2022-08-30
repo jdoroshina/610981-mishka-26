@@ -5,7 +5,7 @@
 	margin: 0;
 	padding: 0;
 
-	@media (--not-mobile) {
+	@media #{$not-mobile} {
 		--column-count: 2;
 	}
 }
@@ -27,7 +27,7 @@
 	grid-template-columns: min-content 1fr;
 	color: var(--major-color);
 
-	@media (--desktop-only) {
+	@media #{$desktop-only} {
 		grid-template-columns: min-content 1fr 1fr;
 	}
 
@@ -85,7 +85,7 @@
 	padding-bottom: 31px;
 	padding-left: 30px;
 
-	@media (--not-mobile) {
+	@media #{$not-mobile} {
 		padding-top: 25px;
 		padding-bottom: 34px;
 		padding-left: 37px;

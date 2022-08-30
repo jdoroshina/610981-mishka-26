@@ -6,11 +6,11 @@
 	padding: 72px 0;
 	text-align: center;
 
-	@media (--tablet-only) {
+	@media #{$tablet-only} {
 		padding: 89px 0;
 	}
 
-	@media (--desktop-only) {
+	@media #{$desktop-only} {
 		padding: 95px 0;
 	}
 }

@@ -3,7 +3,7 @@
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(4, auto);
 
-	@media (--desktop-only) {
+	@media #{$desktop-only} {
 		grid-template-columns: repeat(5, 1fr);
 		grid-template-rows: repeat(5, auto);
 	}
@@ -32,7 +32,7 @@
 	transform: translateZ(0);
 
 
-	@media (--not-mobile) {
+	@media #{$not-mobile} {
 		border: none;
 	}
 }
