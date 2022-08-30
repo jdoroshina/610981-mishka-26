@@ -11,6 +11,10 @@
 	font-size: 17px;
 	line-height: 23px;
 	color: var(--base-color);
+	background-color: inherit;
+	border: none;
+	border-bottom: 2px solid var(--main-color);
+	resize: vertical;
 
 	@media (--not-mobile) {
 		padding: 17px;
@@ -20,6 +24,7 @@
 
 	&--border_full {
 		padding: 17px;
+		border: 2px solid var(--main-color);
 	}
 
 	&::placeholder {
