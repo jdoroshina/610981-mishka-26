@@ -1,7 +1,16 @@
 .custom__text {
+	margin-top: 17px;
+	margin-bottom: 17px;
 	font-size: 13px;
 
+	@media (--tablet-only) {
+		margin-top: 54px;
+		margin-bottom: 64px;
+	}
+
 	@media (--desktop-only) {
+		margin-top: 98px;
+		margin-bottom: 63px;
 		padding: 0 175px;
 	}
 }
