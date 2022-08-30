@@ -1,23 +1,77 @@
-.order-form__inner-wrapper {
+.order-form {
+	display: grid;
+	gap: 32px;
+
+	@media (--mobile-only) {
+		padding-top: 12px;
+		padding-bottom: 25px;
+	}
+
 	@media (--not-mobile) {
+		gap: 50px;
+	}
+}
+
+.order-form__inner-wrapper {
+	display: grid;
+	gap: 34px;
+
+	@media (--not-mobile) {
+		gap: 41px;
+		padding-top: 50px;
+		padding-bottom: 50px;
 		background-color: var(--minor-color);
 	}
 }
 
 .order-form__title {
 	color: var(--light-accent-color);
+
+	@media (--mobile-only) {
+		--title-decoration-line: "";
+		display: flex;
+		align-items: center;
+		gap: 25px;
+	}
+
+	@media (--desktop-only) {
+		padding-left: 46px;
+	}
+
+	&::after {
+		content: var(--title-decoration-line, initial);
+		display: block;
+		flex-grow: 1;
+		height: 1px;
+		background-color: var(--accent-color);
+	}
 }
 
 .order-form__group {
 	display: grid;
 
+	@media (--mobile-only) {
+		&--gap_xs {
+			gap: 5px;
+		}
+
+		&--gap_m {
+			gap: 24px;
+		}
+
+		&--gap_l {
+			gap: 30px;
+		}
+	}
+
 	@media (--tablet-only) {
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: 167px 1fr;
 	}
 
 	@media (--desktop-only) {
-		grid-template-columns: repeat(5, 1fr);
+		grid-template-columns: 175px 1fr;
 		padding-right: 175px;
+		box-sizing: border-box;
 	}
 }
 
@@ -38,8 +92,19 @@
 	padding: 0;
 }
 
+.order-form__radio {
+	display: grid;
+	gap: 11px;
+
+	@media (--not-mobile) {
+		gap: 24px;
+	}
+}
+
+
 .order-form__checkbox {
 	display: grid;
+	gap: 24px;
 
 	@media (--tablet-only) {
 		grid-template-columns: repeat(2, 1fr);
@@ -56,14 +121,50 @@
 	}
 }
 
+.order-form__user-name {
+	display: grid;
+	gap: 22px;
+
+	@media (--not-mobile) {
+		gap: 40px;
+	}
+}
+
+.order-form__field-group {
+	margin: 0;
+}
+
 .order-form__submit-container {
 	@media (--not-mobile) {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 	}
 
 	@media (--desktop-only) {
 		padding: 0 175px;
+		box-sizing: border-box;
+	}
+}
+
+.order-form__submit {
+	margin-top: 30px;
+	margin-bottom: 30px;
+
+	@media (--tablet-only) {
+		max-width: max-content;
+		margin-top: 53px;
+		margin-bottom: 50px;
+		padding-right: 32px;
+		padding-left: 32px;
+	}
+
+	@media (--desktop-only) {
+		max-width: max-content;
+		margin-top: 50px;
+		margin-bottom: 50px;
+		padding-right: 17px;
+		padding-left: 17px;
 	}
 }
 
