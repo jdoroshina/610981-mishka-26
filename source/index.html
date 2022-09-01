@@ -37,7 +37,19 @@
 			</dl>
 		</div>
 		<div class="promo__image-wrapper">
-			<img class="promo__image" src="./img/promo-triple-basket-set.jpg" width="260" height="315" alt="Набор из трех вязаных корзинок разного размера.">
+			<picture>
+				<source type="image/avif" media="(min-width: 1150px)" srcset="./img/promo_triple_basket_set-desktop@1x.avif 1x, ./img/promo_triple_basket_set-desktop@2x.avif 2x">
+				<source type="image/avif" media="(min-width: 768px)" srcset="./img/promo_triple_basket_set-tablet@1x.avif 1x, ./img/promo_triple_basket_set-tablet@2x.avif 2x">
+				<source type="image/avif" media="(max-width: 767.9px)" srcset="./img/promo_triple_basket_set-mobile@1x.avif 1x, ./img/promo_triple_basket_set-mobile@2x.avif 2x">
+
+				<source type="image/webp" media="(min-width: 1150px)" srcset="./img/promo_triple_basket_set-desktop@1x.webp 1x, ./img/promo_triple_basket_set-desktop@2x.webp 2x">
+				<source type="image/webp" media="(min-width: 768px)" srcset="./img/promo_triple_basket_set-tablet@1x.webp 1x, ./img/promo_triple_basket_set-tablet@2x.webp 2x">
+				<source type="image/webp" media="(max-width: 767.9px)" srcset="./img/promo_triple_basket_set-mobile@1x.webp 1x, ./img/promo_triple_basket_set-mobile@2x.webp 2x">
+
+				<source media="(min-width: 1150px)" srcset="./img/promo_triple_basket_set-desktop@1x.jpg 1x, ./img/promo_triple_basket_set-desktop@2x.jpg 2x">
+				<source media="(min-width: 768px)" srcset="./img/promo_triple_basket_set-tablet@1x.jpg 1x, ./img/promo_triple_basket_set-tablet@2x.jpg 2x">
+				<img class="promo__image" src="./img/promo_triple_basket_set-mobile@1x.jpg" width="260" height="315" srcset="./img/promo_triple_basket_set-mobile@2x.jpg 2x" alt="Набор из трех вязаных корзинок разного размера.">
+			</picture>
 		</div>
 		<b class="promo__price">Цена: 990 руб.</b>
 		<a class="promo__button button button--main" href="javascript:undefined;">Заказать</a>
