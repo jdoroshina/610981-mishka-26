@@ -129,16 +129,30 @@
 	@media #{$tablet-only} {
 		grid-column: 2 / span 1;
 		grid-row: 2 / -1;
+		width: 334px;
+		height: 404px;
 	}
 
 	@media #{$desktop-only} {
 		grid-column: 3 / span 1;
 		grid-row: 1 / -1;
+		width: 525px;
+		height: 636px;
 	}
 }
 
 .promo__image {
 	display: block;
+
+	@media #{$tablet-only} {
+		width: 334px;
+		height: 404px;
+	}
+
+	@media #{$desktop-only} {
+		width: 525px;
+		height: 636px;
+	}
 }
 
 .promo__price {
