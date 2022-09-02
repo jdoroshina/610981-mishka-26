@@ -2,13 +2,13 @@
 	--card-content-margin: 28px;
 
 	display: grid;
-	border: 1px solid var(--additional-color);
+	border: 1px solid var(--dark-minor-color);
 
 	@media #{$tablet-only} {
 		--card-content-margin: 33px;
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: auto auto 1fr auto;
-		border-bottom: 1px solid var(--additional-color);
+		border-bottom: 1px solid var(--dark-minor-color);
 	}
 
 	@media #{$desktop-only} {
@@ -33,7 +33,7 @@
 
 .card__image {
 	display: block;
-	background-color: var(--additional-color);
+	background-color: var(--dark-minor-color);
 }
 
 .card__description {
@@ -54,7 +54,7 @@
 	margin: 0 var(--card-content-margin);
 	padding-top: 22px;
 	padding-bottom: 26px;
-	border-top: 1px solid var(--additional-color);
+	border-top: 1px solid var(--dark-minor-color);
 
 	@media #{$tablet-only} {
 		grid-row: span 1 / -1;

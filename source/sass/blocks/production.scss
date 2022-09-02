@@ -3,7 +3,7 @@
 
 	display: grid;
 	margin-bottom: 58px;
-	border: 1px solid var(--additional-color);
+	border: 1px solid var(--dark-minor-color);
 
 	@media #{$tablet-only} {
 		--production-content-centerer: 42px;
@@ -74,7 +74,7 @@
 
 .video__image {
 	display: block;
-	background-color: var(--additional-color);
+	background-color: var(--dark-minor-color);
 }
 
 .production__description {
