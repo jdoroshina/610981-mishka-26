@@ -116,7 +116,7 @@
 				</div>
 			</div>
 			<div class="contacts__map-wrapper">
-				<img class="contacts__map" src="./img/map-mobile@1x1.jpg" width="320" height="454" alt="Магазин по адресу: улица Большая Конюшенная дом 19/8 офис 101, город Санкт-Петербург.">
+				{% include "./templates/picture.twig" with {name: "map", class: "contacts__map"} %}
 			</div>
 			<div class="contacts__button-wrapper page__centerer page__centerer--only-desktop_off">
 				<a class="contacts__button button button--main" href="javascript:undefined;">Напишите нам</a>

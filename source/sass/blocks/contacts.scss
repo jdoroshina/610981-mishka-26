@@ -106,6 +106,17 @@
 
 .contacts__map {
 	display: block;
+	background-color: var(--dark-minor-color);
+
+	@media #{$tablet-only} {
+		width: 768px;
+		height: 457px;
+	}
+
+	@media #{$desktop-only} {
+		width: 527px;
+		height: 457px;
+	}
 }
 
 .contacts__button-wrapper {
