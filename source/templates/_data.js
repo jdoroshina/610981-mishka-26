@@ -26,6 +26,14 @@ export default {
 			"maxdppx": 2,
 			"alt": "Магазин по адресу: улица Большая Конюшенная дом 19/8 офис 101, город Санкт-Петербург.",
 			"viewports": ["desktop", "tablet", "mobile"]
+		},
+		"promo": {
+			"ext": "jpg",
+			"width": 260,
+			"height": 315,
+			"maxdppx": 2,
+			"alt": "Набор из трех вязаных корзинок разного размера.",
+			"viewports": ["desktop", "tablet", "mobile"]
 		}
 	}
 }

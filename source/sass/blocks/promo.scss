@@ -143,6 +143,7 @@
 
 .promo__image {
 	display: block;
+	background-color: var(--minor-color);
 
 	@media #{$tablet-only} {
 		width: 334px;

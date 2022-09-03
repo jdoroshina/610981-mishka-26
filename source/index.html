@@ -37,19 +37,7 @@
 			</dl>
 		</div>
 		<div class="promo__image-wrapper">
-			<picture>
-				<source type="image/avif" media="(min-width: 1150px)" srcset="./img/promo-desktop@1x.avif 1x, ./img/promo-desktop@2x.avif 2x">
-				<source type="image/avif" media="(min-width: 768px)" srcset="./img/promo-tablet@1x.avif 1x, ./img/promo-tablet@2x.avif 2x">
-				<source type="image/avif" media="(max-width: 767.9px)" srcset="./img/promo-mobile@1x.avif 1x, ./img/promo-mobile@2x.avif 2x">
-
-				<source type="image/webp" media="(min-width: 1150px)" srcset="./img/promo-desktop@1x.webp 1x, ./img/promo-desktop@2x.webp 2x">
-				<source type="image/webp" media="(min-width: 768px)" srcset="./img/promo-tablet@1x.webp 1x, ./img/promo-tablet@2x.webp 2x">
-				<source type="image/webp" media="(max-width: 767.9px)" srcset="./img/promo-mobile@1x.webp 1x, ./img/promo-mobile@2x.webp 2x">
-
-				<source media="(min-width: 1150px)" srcset="./img/promo-desktop@1x.jpg 1x, ./img/promo-desktop@2x.jpg 2x">
-				<source media="(min-width: 768px)" srcset="./img/promo-tablet@1x.jpg 1x, ./img/promo-tablet@2x.jpg 2x">
-				<img class="promo__image" src="./img/promo-mobile@1x.jpg" width="260" height="315" srcset="./img/promo-mobile@2x.jpg 2x" alt="Набор из трех вязаных корзинок разного размера.">
-			</picture>
+			{% include "./templates/picture.twig" with {name: "promo", class: "promo__image"} %}
 		</div>
 		<b class="promo__price">Цена: 990 руб.</b>
 		<a class="promo__button button button--main" href="javascript:undefined;">Заказать</a>
@@ -128,7 +116,7 @@
 				</div>
 			</div>
 			<div class="contacts__map-wrapper">
-				<img class="contacts__map" src="./img/map-mobile@1x1.jpg" width="320" height="454" alt="Карта с отметкой местоположения магазина Мишка.">
+				<img class="contacts__map" src="./img/map-mobile@1x1.jpg" width="320" height="454" alt="Магазин по адресу: улица Большая Конюшенная дом 19/8 офис 101, город Санкт-Петербург.">
 			</div>
 			<div class="contacts__button-wrapper page__centerer page__centerer--only-desktop_off">
 				<a class="contacts__button button button--main" href="javascript:undefined;">Напишите нам</a>
