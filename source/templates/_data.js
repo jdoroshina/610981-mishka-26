@@ -41,6 +41,14 @@ export default {
 			"maxdppx": 2,
 			"alt": "Набор из трех вязаных корзинок разного размера.",
 			"viewports": ["desktop", "tablet", "mobile"]
+		},
+		"feedback": {
+			"ext": "jpg",
+			"width": 350,
+			"height": 457,
+			"maxdppx": 2,
+			"alt": "Вязаная салфетка.",
+			"viewports": ["desktop", "tablet"]
 		}
 	}
 }

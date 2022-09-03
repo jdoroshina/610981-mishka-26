@@ -1,6 +1,7 @@
 .wrapper-feedback {
 	@media #{$tablet-only} {
-		background-image: url("../../img/background-feedback.jpg");
 		background-repeat: no-repeat;
+
+		@include bg-universal("feedback");
 	}
 }
