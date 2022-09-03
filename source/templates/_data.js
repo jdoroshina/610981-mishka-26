@@ -32,6 +32,7 @@ export default {
 			"width": 320,
 			"height": 282,
 			"maxdppx": 2,
+			"alt": "Полка с изделиями магазина",
 			"viewports": ["desktop", "tablet", "mobile"]
 		},
 		"promo": {
