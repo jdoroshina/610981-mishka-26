@@ -27,6 +27,13 @@ export default {
 			"alt": "Магазин по адресу: улица Большая Конюшенная дом 19/8 офис 101, город Санкт-Петербург.",
 			"viewports": ["desktop", "tablet", "mobile"]
 		},
+		"hero": {
+			"ext": "jpg",
+			"width": 320,
+			"height": 282,
+			"maxdppx": 2,
+			"viewports": ["desktop", "tablet", "mobile"]
+		},
 		"promo": {
 			"ext": "jpg",
 			"width": 260,
