@@ -8,6 +8,7 @@
 
 	@media #{$desktop-only} {
 		grid-template-columns: repeat(2, 1fr);
+		column-gap: 57px;
 		padding-left: 175px;
 		padding-top: 41px;
 		padding-bottom: 75px;
