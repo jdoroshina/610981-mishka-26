@@ -1,5 +1,19 @@
 .hero {
-	background-color: var(--minor-color);
+	min-height: 282px;
+	background-color: var(--light-minor-color);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+
+	@include bg-universal("hero");
+
+	@media #{$tablet-only} {
+		min-height: 561px;
+	}
+
+	@media #{$desktop-only} {
+		min-height: 564px;
+	}
 }
 
 .hero__title {
