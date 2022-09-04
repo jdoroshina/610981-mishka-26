@@ -2,6 +2,8 @@
 	display: grid;
 	margin-bottom: 26px;
 
+	@include bg-image("feedback");
+
 	@media #{$tablet-only} {
 		grid-template-columns: repeat(4, 1fr);
 		grid-template-rows: repeat(5, auto);
@@ -19,9 +21,7 @@
 		padding-bottom: 72px;
 		padding-left: 175px;
 		box-sizing: border-box;
-		background-repeat: no-repeat;
-
-		@include bg-universal("feedback");
+		background: var(--bg-image) no-repeat;
 	}
 }
 

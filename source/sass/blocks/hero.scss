@@ -1,11 +1,8 @@
 .hero {
 	min-height: 282px;
-	background-color: var(--light-minor-color);
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: center;
+	background: var(--light-minor-color) var(--bg-image) no-repeat center / contain;
 
-	@include bg-universal("hero");
+	@include bg-image("hero");
 
 	@media #{$tablet-only} {
 		min-height: 561px;

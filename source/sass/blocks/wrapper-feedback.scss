@@ -1,7 +1,7 @@
 .wrapper-feedback {
-	@media #{$tablet-only} {
-		background-repeat: no-repeat;
+	@include bg-image("feedback");
 
-		@include bg-universal("feedback");
+	@media #{$tablet-only} {
+		background: var(--bg-image) no-repeat;
 	}
 }
