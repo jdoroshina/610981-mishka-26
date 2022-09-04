@@ -15,7 +15,7 @@
 					<h3 class="card__title heading heading--level_5">Зайчик-попрыгайчик</h3>
 				</a>
 				<a class="card__link card__link-image link" href="javascript:undefined;">
-					<img class="card__image" src="./img/products/rabbit-mobile.jpg" width="260" height="195" alt="Вязаная игрушка зайчик.">
+					{% include "./templates/picture.twig" with {name: "./products/rabbit", class: "card__image"} %}
 				</a>
 				<div class="card__description content">
 					<p>Рост 30 см, вес 200 г</p>
@@ -32,7 +32,7 @@
 					<h3 class="card__title heading heading--level_5">Корзинка для белья</h3>
 				</a>
 				<a class="card__link card__link-image link" href="javascript:undefined;">
-					<img class="card__image" src="./img/products/lineragie-basket-mobile.jpg" width="260" height="195" alt="Вязаная корзина для хранения белья.">
+					{% include "./templates/picture.twig" with {name: "./products/lineragie-basket", class: "card__image"} %}
 				</a>
 				<div class="card__description content">
 					<p>Диаметр 15 см, высота 10 см</p>
@@ -49,7 +49,7 @@
 					<h3 class="card__title heading heading--level_5">Большая корзинка для игрушек</h3>
 				</a>
 				<a class="card__link card__link-image link" href="javascript:undefined;">
-					<img class="card__image" src="./img/products/big-toys-basket-mobile.jpg" width="260" height="195" alt="Вязаная большая корзина для хранения.">
+					{% include "./templates/picture.twig" with {name: "./products/toys-basket", class: "card__image"} %}
 				</a>
 				<div class="card__description content">
 					<p>Диаметр 30 см, высота 30 см</p>

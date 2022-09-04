@@ -50,6 +50,30 @@ export default {
 			"maxdppx": 2,
 			"alt": "Вязаная салфетка.",
 			"viewports": ["desktop", "tablet"]
+		},
+		"./products/rabbit": {
+			"ext": "jpg",
+			"width": 260,
+			"height": 195,
+			"maxdppx": 2,
+			"alt": "Вязаная игрушка зайчик.",
+			"viewports": ["desktop", "tablet", "mobile"]
+		},
+		"./products/lineragie-basket": {
+			"ext": "jpg",
+			"width": 260,
+			"height": 195,
+			"maxdppx": 2,
+			"alt": "Вязаная корзина для хранения белья.",
+			"viewports": ["desktop", "tablet", "mobile"]
+		},
+		"./products/toys-basket": {
+			"ext": "jpg",
+			"width": 260,
+			"height": 195,
+			"maxdppx": 2,
+			"alt": "Вязаная большая корзина для хранения.",
+			"viewports": ["desktop", "tablet", "mobile"]
 		}
 	}
 }
