@@ -66,7 +66,7 @@
 	<section class="production page__centerer">
 		<h2 class="production__title heading heading--level_5">Процесс производства</h2>
 		<a class="production__link video" href="javascript:undefined;">
-			<img class="video__image" src="./img/video-poster-mobile.jpg" width="260" height="150" alt="Стопкадр из видео с производством вязаных корзинок.">
+			{% include "./templates/picture.twig" with {name: "video", class: "video__image"} %}
 		</a>
 		<div class="production__description content">
 			<p>По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>

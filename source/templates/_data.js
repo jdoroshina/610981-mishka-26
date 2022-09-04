@@ -74,6 +74,14 @@ export default {
 			"maxdppx": 2,
 			"alt": "Вязаная большая корзина для хранения.",
 			"viewports": ["desktop", "tablet", "mobile"]
+		},
+		"video": {
+			"ext": "jpg",
+			"width": 260,
+			"height": 150,
+			"maxdppx": 2,
+			"alt": "Стопкадр из видео с производством вязаных корзинок.",
+			"viewports": ["desktop", "tablet", "mobile"]
 		}
 	}
 }
