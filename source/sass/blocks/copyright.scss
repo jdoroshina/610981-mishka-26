@@ -21,12 +21,11 @@
 	&::before {
 		content: "";
 		position: absolute;
-		width: 27px;
-		height: 34px;
+		width: 36px;
+		height: 36px;
 		margin-left: 27px;
-		outline: 2px dashed;
-		outline-offset: -2px;
 		background-color: var(--light-accent-color);
+		mask: url("../../icons/stack.svg#htmlacademy") no-repeat center / contain;
 		transform: translateY(-25%);
 	}
 }
