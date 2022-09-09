@@ -57,26 +57,24 @@
 		grid-column: span 1 / -1;
 		align-self: center;
 		justify-self: end;
+		width: 62px;
+		height: 62px;
 		background-color: var(--accidental-accent-color);
-		outline: 2px dashed;
-		outline-offset: -2px;
 		opacity: var(--icon-opacity, 0.5);
 	}
 }
 
 .features__accessories {
 	&::after {
-		width: 40px;
-		height: 62px;
 		margin-right: 36px;
+		mask-image: url("../../icons/stack.svg#lamp");
 	}
 }
 
 .features__toys {
 	&::after {
-		width: 60px;
-		height: 60px;
 		margin-right: 31px;
+		mask-image: url("../../icons/stack.svg#lego");
 	}
 }
 
