@@ -51,6 +51,30 @@
 		}
 	}
 
+	&--ecology {
+		--advantages-icon: url("../../icons/stack.svg#flower");
+	}
+
+	&--handmade {
+		--advantages-icon: url("../../icons/stack.svg#thread-ball");
+	}
+
+	&--price {
+		--advantages-icon: url("../../icons/stack.svg#money");
+	}
+
+	&--local {
+		--advantages-icon: url("../../icons/stack.svg#rocket");
+	}
+
+	&--likes {
+		--advantages-icon: url("../../icons/stack.svg#heart");
+	}
+
+	&--giftbox {
+		--advantages-icon: url("../../icons/stack.svg#giftbox");
+	}
+
 	&::marker {
 		color: transparent;
 	}
@@ -58,11 +82,10 @@
 	&::before {
 		content: "";
 		display: block;
-		width: 55px;
-		height: 38px;
+		width: 56px;
+		height: 56px;
 		margin-bottom: 22px;
+		mask: var(--advantages-icon) no-repeat center / contain;
 		background-color: var(--light-accent-color);
-		outline: 2px dashed;
-		outline-offset: -2px;
 	}
 }
