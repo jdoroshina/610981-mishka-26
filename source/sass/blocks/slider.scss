@@ -25,14 +25,17 @@
 	height: 26px;
 	padding: 13px 40px;
 	box-sizing: border-box;
+	mask: url("../../icons/stack.svg#big-arrow") no-repeat center / contain;
 	background-color: var(--main-color);
 	border: 1px solid var(--dark-minor-color);
-	outline: 2px dashed;
-	outline-offset: -2px;
 	transform: translateZ(0);
 
 
 	@media #{$not-mobile} {
 		border: none;
+	}
+
+	&--back {
+		transform: rotate(180deg);
 	}
 }
