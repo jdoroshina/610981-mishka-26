@@ -26,13 +26,24 @@
 }
 
 .social__link {
+	&--tg {
+		--social-icon: url("../../icons/stack.svg#social_tg");
+	}
+
+	&--vk {
+		--social-icon: url("../../icons/stack.svg#social_vk");
+	}
+
+	&--yt {
+		--social-icon: url("../../icons/stack.svg#social_yt");
+	}
+
 	&::before {
 		content: "";
 		display: block;
 		width: 28px;
-		height: 26px;
-		outline: 2px dashed;
-		outline-offset: -2px;
-		background-color: #231f20;
+		height: 28px;
+		background-color: var(--light-main-color);
+		mask: var(--social-icon) no-repeat center / contain;
 	}
 }
