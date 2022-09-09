@@ -25,13 +25,4 @@
 	@media #{$not-mobile} {
 		display: flex;
 	}
-
-	&::before {
-		content: "";
-		width: 102px;
-		height: 34px;
-		outline: 2px dashed;
-		outline-offset: -2px;
-		background-color: var(--main-color);
-	}
 }
