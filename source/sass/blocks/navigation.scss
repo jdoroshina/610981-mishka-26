@@ -76,4 +76,36 @@
 
 .navigation__link {
 	text-align: left;
+
+	@media #{$not-mobile} {
+		&--icon_on {
+			--navigation-link-icon-on: "";
+		}
+	}
+
+	&--icon_search {
+		--navigation-link-icon: url("../../icons/stack.svg#search");
+	}
+
+	&--icon_cart {
+		--navigation-link-icon: url("../../icons/stack.svg#cart");
+	}
+
+	&::before {
+		content: var(--navigation-link-icon-on, initial);
+		display: block;
+		width: 22px;
+		height: 22px;
+		mask: var(--navigation-link-icon) no-repeat center / contain;
+		background-color: var(--main-color);
+		opacity: 0.2;
+	}
+}
+
+.navigation__link-text {
+	display: none;
+
+	@media #{$mobile-only} {
+		display: block;
+	}
 }
