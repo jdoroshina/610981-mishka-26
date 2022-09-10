@@ -68,10 +68,7 @@
 		display: block;
 		width: var(--control-size, 38px);
 		height: var(--control-size, 38px);
-		background-color: #4b0082;
-		background-image: url("../../icons/checkbox-checked.svg");
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: contain;
+		background-color: var(--base-color);
+		mask: url("../../icons/stack.svg#checkbox-checked") no-repeat center / contain;
 	}
 }
