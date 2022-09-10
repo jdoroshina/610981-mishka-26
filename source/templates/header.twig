@@ -1,6 +1,12 @@
 <header class="main-header page__centerer">
 	<a class="main-header__logo" href="index.html">
-		<img class="main-header__logo-image" src="../img/logo-mobile.svg" width="86" height="35" alt="Логотип интернет-магазина Мишка.">
+		<picture>
+			<source  media="(min-width: 1150px)" srcset="../img/logo.svg#logo-desktop">
+
+			<source  media="(min-width: 768px)" srcset="../img/logo.svg#logo-tablet">
+
+			<img class="main-header__logo-image" src="../img/logo.svg#logo-mobile" width="86" height="36" alt="Логотип интернет-магазина Мишка.">
+		</picture>
 	</a>
 	<nav class="main-header__navigation navigation">
 		<button class="navigation__toggle button" type="button">
