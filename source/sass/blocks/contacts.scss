@@ -37,10 +37,9 @@
 
 	&::after {
 		content: "";
-		width: 47px;
-		height: 81px;
-		outline: 2px dashed;
-		outline-offset: -2px;
+		width: 82px;
+		height: 82px;
+		background: url("../../icons/stack.svg#flag") no-repeat center / contain;
 
 		@media #{$tablet-only} {
 			position: absolute;
