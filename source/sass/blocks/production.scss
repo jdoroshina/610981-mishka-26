@@ -72,21 +72,6 @@
 	}
 }
 
-.video__image {
-	display: block;
-	background-color: var(--dark-minor-color);
-
-	@media #{$tablet-only} {
-		width: 668px;
-		height: 455px;
-	}
-
-	@media #{$desktop-only} {
-		width: 683px;
-		height: 455px;
-	}
-}
-
 .production__description {
 	margin-right: var(--production-content-centerer);
 	margin-left: var(--production-content-centerer);
