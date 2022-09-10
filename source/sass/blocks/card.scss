@@ -83,8 +83,7 @@
 		width: 20px;
 		height: 19px;
 		background-color: var(--main-color);
+		mask: url("../../icons/stack.svg#cart") no-repeat center / contain;
 		opacity: 0.2;
-		outline: 2px dashed;
-		outline-offset: -2px;
 	}
 }
