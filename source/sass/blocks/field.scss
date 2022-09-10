@@ -6,6 +6,7 @@
 }
 
 .field__input {
+	display: grid;
 	padding: 17px 0;
 	font-family: var(--main-font);
 	font-size: 17px;
@@ -30,5 +31,23 @@
 	&::placeholder {
 		color: var(--main-color);
 		opacity: 0.3;
+	}
+
+	&[type="tel"]::before {
+		content: "";
+		width: 32px;
+		height: 32px;
+		background-color: var(--main-color);
+		mask: url("../../icons/stack.svg#phone") no-repeat center / contain;
+		opacity: 0.2;
+	}
+
+	&[type="email"]::before {
+		content: "";
+		width: 32px;
+		height: 32px;
+		background-color: var(--main-color);
+		mask: url("../../icons/stack.svg#mail") no-repeat center / contain;
+		opacity: 0.2;
 	}
 }
