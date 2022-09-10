@@ -6,8 +6,11 @@
 }
 
 .field__input {
-	display: grid;
+	grid-column: 2 / -1;
+	grid-row: 1 / 2;
 	padding: 17px 0;
+	padding-right: 50px;
+	box-sizing: border-box;
 	font-family: var(--main-font);
 	font-size: 17px;
 	line-height: 23px;
@@ -32,22 +35,24 @@
 		color: var(--main-color);
 		opacity: 0.3;
 	}
+}
 
-	&[type="tel"]::before {
-		content: "";
-		width: 32px;
-		height: 32px;
-		background-color: var(--main-color);
-		mask: url("../../icons/stack.svg#phone") no-repeat center / contain;
-		opacity: 0.2;
+.field__input-icon {
+	grid-column: 2 / -1;
+	grid-row: 1 / 2;
+	justify-self: end;
+	pointer-events: none;
+	width: 32px;
+	height: 32px;
+	background-color: var(--main-color);
+	mask: var(--input-field-icon) no-repeat center / contain;
+	opacity: 0.2;
+
+	&--phone {
+		--input-field-icon: url("../../icons/stack.svg#phone");
 	}
 
-	&[type="email"]::before {
-		content: "";
-		width: 32px;
-		height: 32px;
-		background-color: var(--main-color);
-		mask: url("../../icons/stack.svg#mail") no-repeat center / contain;
-		opacity: 0.2;
+	&--email {
+		--input-field-icon: url("../../icons/stack.svg#mail");
 	}
 }
