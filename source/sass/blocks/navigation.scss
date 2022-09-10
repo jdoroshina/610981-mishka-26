@@ -77,8 +77,8 @@
 .navigation__link {
 	text-align: left;
 
-	@media #{$not-mobile} {
-		&--icon_on {
+	&--icon_on {
+		@media #{$not-mobile} {
 			--navigation-link-icon-on: "";
 		}
 	}
