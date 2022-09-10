@@ -55,10 +55,9 @@
 	&::before {
 		content: "";
 		width: 32px;
-		height: 22px;
+		height: 32px;
 		background-color: var(--light-accent-color);
-		outline: 2px dashed;
-		outline-offset: -2px;
+		mask: url("../../icons/stack.svg#camera");
 	}
 }
 
