@@ -1,0 +1,54 @@
+.divider {
+	position: relative;
+
+	&--divider_wave {
+		--is-fullwidth: 1;
+		--divider-color: var(--minor-color);
+		--divider-length: 100vw;
+		--divider-block-pos: calc(-0.5 * var(--divider-altitude));
+		--divider-shape: url("data:image/svg+xml,<svg viewBox='0 0 50 32' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><path d='M50 32V0C37.5 0 37.5 13 25 13C12.5 13 12.5 0 0 0V32' fill='white'/></svg>");
+
+		@media #{$not-mobile} {
+			--divider-altitude: 24px;
+			--shape-size: 39px;
+		}
+
+		@media #{$desktop-only} {
+			--divider-altitude: 34px;
+			--shape-size: 62.5px;
+		}
+	}
+
+	&--divider_sin {
+		--is-fullwidth: 1;
+		--divider-color: var(--minor-color);
+		--divider-length: 100vw;
+		--divider-altitude: 6px;
+		--shape-size: 16px;
+		--divider-block-pos: calc(-0.5 * (var(--divider-altitude) + var(--section-gap)));
+		--divider-shape: url("data:image/svg+xml,<svg viewBox='0 0 50 21' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><path d='m0 4c12.5 0 12.5 13 25 13s12.5-13 25-13' stroke='rgb(241 241 241)' stroke-width='8' fill='none'/></svg>");
+
+		@media #{$not-mobile} {
+			--shape-size: 38.4px;
+			--divider-altitude: 17px;
+		}
+
+		@media #{$desktop-only} {
+			--is-fullwidth: 0;
+			--divider-length: 100%;
+			--divider-altitude: 23px;
+			--shape-size: 52.5px;
+		}
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		inset-inline-end: calc(var(--is-fullwidth) * (100vw - 0.4px - var(--content-indent)));
+		inset-block-end: var(--divider-block-pos);
+		inline-size: var(--divider-length);
+		block-size: var(--divider-altitude);
+		background: var(--divider-shape) repeat-x center / var(--shape-size) var(--divider-altitude);
+		filter: drop-shadow(var(--divider-length) 0 0 rgb(241 241 241));
+	}
+}
