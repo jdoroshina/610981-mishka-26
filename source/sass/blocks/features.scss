@@ -1,8 +1,11 @@
+.features {
+	background-color: var(--light-minor-color);
+}
+
 .features__list {
 	--column-count: 1;
 	display: grid;
 	grid-template-columns: repeat(var(--column-count), 1fr);
-	margin: 0;
 	padding: 0;
 
 	@media #{$not-mobile} {
