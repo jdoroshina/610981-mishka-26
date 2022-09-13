@@ -27,44 +27,47 @@
 }
 
 .navigation__list {
-	display: none;
+	display: flex;
+	flex-wrap: wrap;
 	margin: 0;
 	padding: 0;
 }
 
 .navigation__site-navigation {
-	display: none;
+	@media #{$mobile-only} {
+		display: none;
+	}
 
 	@media #{$tablet-only} {
 		grid-column: 1 / span 1;
 		grid-row: span 1 / -1;
-		display: block;
 	}
 
 	@media #{$desktop-only} {
 		grid-column: 1 / span 1;
 		grid-row: 1  / span 1;
-		display: block;
 	}
 }
 
 .navigation__user-navigation {
-	display: none;
+	@media #{$mobile-only} {
+		display: none;
+	}
 
 	@media #{$not-mobile} {
 		grid-column: span 1 / -1;
 		grid-row: 1 / span 1;
-		display: block;
 	}
 }
 
 .navigation__promo-navigation {
-	display: none;
+	@media #{$not-desktop} {
+		display: none;
+	}
 
 	@media #{$desktop-only} {
 		grid-column: 1 / span 1;
 		grid-row: span 1 / -1;
-		display: block;
 	}
 }
 
@@ -75,11 +78,14 @@
 }
 
 .navigation__link {
+	box-sizing: border-box;
 	text-align: left;
 
 	&--icon_on {
 		@media #{$not-mobile} {
 			--navigation-link-icon-on: "";
+			display: grid;
+			grid-auto-flow: column;
 		}
 	}
 
@@ -91,11 +97,22 @@
 		--navigation-link-icon: url("../../icons/stack.svg#cart");
 	}
 
+	&--border_left {
+		border-left: 1px solid rgb(0, 0, 0, 0.1);
+	}
+
+	&--border_right {
+		@media #{$desktop-only} {
+			border-right: 1px solid rgb(0, 0, 0, 0.1);
+		}
+	}
+
 	&::before {
 		content: var(--navigation-link-icon-on, initial);
 		display: block;
 		width: 22px;
 		height: 22px;
+		padding: 0 30px;
 		mask: var(--navigation-link-icon) no-repeat center / contain;
 		background-color: var(--main-color);
 		opacity: 0.2;
