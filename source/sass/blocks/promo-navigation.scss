@@ -1,0 +1,9 @@
+.promo-navigation__link {
+	--header-link-padding: 27px;
+	padding-top: var(--header-link-padding);
+	padding-bottom: var(--header-link-padding);
+
+	@media #{$not-mobile} {
+		--header-link-padding: 21px;
+	}
+}

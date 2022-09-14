@@ -1,0 +1,13 @@
+.site-navigation__link {
+	--header-link-padding: 27px;
+	padding-top: var(--header-link-padding);
+	padding-bottom: var(--header-link-padding);
+
+	@media #{$tablet-only} {
+		--header-link-padding: 21px;
+	}
+
+	@media #{$desktop-only} {
+		--header-link-padding: 32px;
+	}
+}

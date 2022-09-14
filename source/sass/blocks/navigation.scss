@@ -19,7 +19,9 @@
 .navigation__toggle {
 	grid-column: span 1/ -1;
 	display: block;
-	padding: 25px;
+	width: 20px;
+	height: 14px;
+	padding: 20px;
 
 	@media #{$not-mobile} {
 		display: none;
@@ -27,8 +29,9 @@
 }
 
 .navigation__list {
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	grid-auto-flow: column;
+	align-items: center;
 	margin: 0;
 	padding: 0;
 }
@@ -41,11 +44,13 @@
 	@media #{$tablet-only} {
 		grid-column: 1 / span 1;
 		grid-row: span 1 / -1;
+		gap: 37px 15px;
 	}
 
 	@media #{$desktop-only} {
 		grid-column: 1 / span 1;
 		grid-row: 1  / span 1;
+		gap: 37px 15px;
 	}
 }
 
@@ -57,6 +62,8 @@
 	@media #{$not-mobile} {
 		grid-column: span 1 / -1;
 		grid-row: 1 / span 1;
+		justify-content: flex-end;
+		align-content: center;
 	}
 }
 
@@ -78,6 +85,7 @@
 }
 
 .navigation__link {
+	--header-link-padding: 27px;
 	box-sizing: border-box;
 	text-align: left;
 
@@ -103,6 +111,7 @@
 
 	&--border_right {
 		@media #{$desktop-only} {
+			padding-right: 35px;
 			border-right: 1px solid rgb(0, 0, 0, 0.1);
 		}
 	}
