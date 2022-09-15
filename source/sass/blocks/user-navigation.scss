@@ -1,3 +1,11 @@
+.user-navigation__item {
+	@media #{$not-mobile} {
+		box-shadow:
+			-0.5px 0.5px 0 0.5px var(--middle-minor-color),
+			0 0 0 0 var(--major-color);
+	}
+}
+
 .user-navigation__link {
 	@media #{$not-mobile} {
 		--header-link-padding: 32px;

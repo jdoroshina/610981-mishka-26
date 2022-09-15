@@ -3,6 +3,7 @@
 	align-items: center;
 
 	@media #{$mobile-only} {
+		--has-shadow: "";
 		position: relative;
 		z-index: 2;
 	}
@@ -16,7 +17,7 @@
 	}
 
 	&::before {
-		content: "";
+		content: var(--has-shadow, none);
 		position: absolute;
 		z-index: -1;
 		top: 0;
@@ -51,11 +52,12 @@
 
 .main-header__logo-image {
 	display: block;
+	object-fit: cover;
 
 	@media #{$tablet-only} {
-		width: 118px;
-		height: 50px;
-		margin-left: -7px;
+		width: 122px;
+		height: 52px;
+		margin-left: -4px;
 	}
 
 	@media #{$desktop-only} {
@@ -78,6 +80,7 @@
 		--header-link-padding: 21px;
 		position: relative;
 		justify-self: end;
+		align-self: stretch;
 		margin: 0;
 		display: block;
 		grid-area: 2 / 3 / 3 / 4;
@@ -87,23 +90,14 @@
 	&::before {
 		content: "";
 		position: absolute;
-		top: 0;
-		left: 0;
+		top: 1px;
+		bottom: 0;
+		right: calc(100vw - var(--content-indent));
 		width: 100vw;
-		height: 100%;
 		background-color: var(--light-minor-color);
-		box-shadow: -100vw 0 0 0 var(--light-minor-color);
+		box-shadow:
+			100vw 0 0 0 var(--light-minor-color),
+			100vw -1px 0 0 var(--middle-minor-color);
 		z-index: -1;
-	}
-
-	&::after {
-		content: "";
-		position: absolute;
-		top: 0;
-		width: 100vw;
-		height: 1px;
-		background-color: var(--main-color);
-		box-shadow: -100vw 0 0 0 var(--main-color);
-		opacity: 0.1;
 	}
 }

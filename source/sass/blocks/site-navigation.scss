@@ -1,6 +1,7 @@
 .site-navigation__link {
 	@media #{$tablet-only} {
 		--header-link-padding: 21px;
+		font-size: 15px;
 	}
 
 	@media #{$desktop-only} {
