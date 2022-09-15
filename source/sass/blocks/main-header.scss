@@ -7,12 +7,8 @@
 		z-index: 2;
 	}
 
-	@media #{$not-mobile} {
-		grid-template-rows: repeat(2, 1fr);
-	}
-
 	@media #{$tablet-only} {
-		grid-template-columns: repeat(2, auto);
+		grid-template-columns: repeat(3, auto);
 	}
 
 	@media #{$desktop-only} {
@@ -73,16 +69,18 @@
 }
 
 .main-header__note {
-	position: relative;
-	display: none;
-	justify-self: end;
-	margin: 0;
+	@media #{$mobile-only} {
+		position: absolute;
+		transform: scale(0);
+	}
 
 	@media #{$not-mobile} {
 		--header-link-padding: 21px;
+		position: relative;
+		justify-self: end;
+		margin: 0;
 		display: block;
-		grid-column: span 1 / -1;
-		grid-row: 2 / -1;
+		grid-area: 2 / 3 / 3 / 4;
 		padding: var(--header-link-padding) 0;
 	}
 
