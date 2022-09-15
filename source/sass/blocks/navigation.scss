@@ -10,6 +10,20 @@
 	@media #{$desktop-only} {
 		grid-template-columns: repeat(3, auto);
 	}
+
+	&--js-none {
+		--toggle-visibility: hidden;
+		--nav-list-position: static;
+		position: static;
+	}
+
+	&--is-closed {
+		--icon-toggle: url("../../icons/stack.svg#burger");
+
+		@media #{$mobile-only} {
+			--nav-visibility: hidden;
+		}
+	}
 }
 
 .navigation__toggle {
