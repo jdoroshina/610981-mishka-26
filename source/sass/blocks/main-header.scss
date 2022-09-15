@@ -1,7 +1,5 @@
 .main-header {
 	display: grid;
-	grid-template-columns: 1fr min-content;
-	grid-template-rows: 1fr;
 	align-items: center;
 
 	@media #{$not-mobile} {
@@ -18,8 +16,7 @@
 }
 
 .main-header__logo {
-	grid-column: 1 / 2;
-	grid-row: 1 / span 1;
+	grid-area: 1 / 1 / 2 / 2;
 	justify-self: center;
 
 	@media #{$mobile-only} {
@@ -54,8 +51,7 @@
 }
 
 .main-header__navigation {
-	grid-column: 1 / -1;
-	grid-row: 1 / -1;
+	display: contents;
 }
 
 .main-header__note {

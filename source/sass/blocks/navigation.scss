@@ -1,8 +1,4 @@
 .navigation {
-	display: grid;
-	grid-template-columns: 1fr min-content;
-	grid-template-rows: 1fr;
-
 	@media #{$not-mobile} {
 		grid-template-rows: repeat(2, 1fr);
 	}
@@ -17,8 +13,8 @@
 }
 
 .navigation__toggle {
-	grid-column: span 1/ -1;
-	display: block;
+	grid-area: 1 / 1 / 2 / 2;
+	justify-self: end;
 	width: 20px;
 	height: 14px;
 	padding: 20px;
@@ -26,6 +22,14 @@
 	@media #{$not-mobile} {
 		display: none;
 	}
+}
+
+.navigation__lists-container {
+	display: grid;
+	visibility: var(--nav-visibility, visible);
+	position: var(--nav-list-position, absolute);
+	top: 100%;
+	width: 100%;
 }
 
 .navigation__list {
