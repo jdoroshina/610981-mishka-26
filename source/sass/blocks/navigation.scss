@@ -15,12 +15,24 @@
 .navigation__toggle {
 	grid-area: 1 / 1 / 2 / 2;
 	justify-self: end;
+	margin-inline-end: -7px;
 	width: 20px;
 	height: 14px;
 	padding: 20px;
+	border: none;
+	visibility: var(--toggle-visibility, visible);
+	background: var(--icon-toggle, url("../../icons/stack.svg#cross")) no-repeat center / contain;
 
 	@media #{$not-mobile} {
 		display: none;
+	}
+
+	&:hover {
+		opacity: 0.6;
+	}
+
+	&:active {
+		opacity: 0.3;
 	}
 }
 
