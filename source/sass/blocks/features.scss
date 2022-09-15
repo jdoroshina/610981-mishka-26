@@ -26,9 +26,13 @@
 }
 
 .features__link {
+	--interaction-shift: 0px;
 	display: grid;
 	grid-template-columns: min-content 1fr;
 	color: var(--major-color);
+	background-color: var(--button-color);
+	box-shadow: 0 calc(-1 * var(--interaction-shift)) 0 0 var(--button-color);
+	transform: translateY(var(--interaction-shift));
 
 	@media #{$desktop-only} {
 		grid-template-columns: min-content 1fr 1fr;
@@ -38,7 +42,7 @@
 		--icon-opacity: 0.7;
 		--button-light-background: var(--extra-light-accent-color);
 		--button-dark-background: var(--extra-dark-accent-color);
-		margin-top: -5px;
+		--interaction-shift: -5px;
 	}
 
 	&:active {
@@ -48,11 +52,11 @@
 	}
 
 	&--button_light {
-		background-color: var(--button-light-background, var(--light-accent-color));
+		--button-color: var(--button-light-background, var(--light-accent-color));
 	}
 
 	&--button_dark {
-		background-color: var(--button-dark-background, var(--dark-accent-color));
+		--button-color: var(--button-dark-background, var(--dark-accent-color));
 	}
 
 	&::after {
