@@ -2,6 +2,11 @@
 	display: grid;
 	align-items: center;
 
+	@media #{$mobile-only} {
+		position: relative;
+		z-index: 2;
+	}
+
 	@media #{$not-mobile} {
 		grid-template-rows: repeat(2, 1fr);
 	}
@@ -13,6 +18,19 @@
 	@media #{$desktop-only} {
 		grid-template-columns: repeat(3, auto);
 	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		bottom: 0;
+		right: calc(100% + var(--content-indent));
+		width: 100vw;
+		box-shadow:
+			100vw -1px 0 0 var(--major-color),
+			100vw 0 0 0 var(--dark-minor-color);
+	}
 }
 
 .main-header__logo {
@@ -20,8 +38,8 @@
 	justify-self: center;
 
 	@media #{$mobile-only} {
-		padding-top: 21px;
-		padding-bottom: 21px;
+		padding-top: 22px;
+		padding-bottom: 22px;
 	}
 
 	@media #{$tablet-only} {

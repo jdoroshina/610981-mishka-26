@@ -59,16 +59,21 @@
 }
 
 .navigation__list {
-	display: grid;
-	grid-auto-flow: column;
+	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	margin: 0;
 	padding: 0;
+
+	@media #{$mobile-only} {
+		flex-direction: column;
+		align-items: stretch;
+	}
 }
 
 .navigation__site-navigation {
 	@media #{$mobile-only} {
-		display: none;
+		// display: none;
 	}
 
 	@media #{$tablet-only} {
@@ -85,10 +90,6 @@
 }
 
 .navigation__user-navigation {
-	@media #{$mobile-only} {
-		display: none;
-	}
-
 	@media #{$not-mobile} {
 		grid-column: span 1 / -1;
 		grid-row: 1 / span 1;
@@ -109,19 +110,46 @@
 }
 
 .navigation__item {
+	position: relative;
+	z-index: 2;
+
+	@media #{$mobile-only} {
+		padding: 11px 0 10px;
+	}
+
 	&::marker {
 		color: transparent;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		bottom: 0;
+		right: calc(100% + var(--content-indent));
+		width: 100vw;
+		box-shadow:
+			100vw 0 0 0 var(--major-color),
+			100vw 0 0 1px var(--dark-minor-color);
 	}
 }
 
 .navigation__link {
-	--header-link-padding: 27px;
+	--header-link-padding: 1em;
 	box-sizing: border-box;
+	display: flex;
 	text-align: left;
+	padding: var(--header-link-padding) 0;
+
+	@media #{$mobile-only} {
+		padding-inline-start: 46px;
+	}
 
 	&--icon_on {
+		--navigation-link-icon-on: "";
+
 		@media #{$not-mobile} {
-			--navigation-link-icon-on: "";
 			display: grid;
 			grid-auto-flow: column;
 		}
@@ -135,8 +163,10 @@
 		--navigation-link-icon: url("../../icons/stack.svg#cart");
 	}
 
-	&--border_left {
-		border-left: 1px solid rgb(0, 0, 0, 0.1);
+	@media #{$not-mobile} {
+		&--border_left {
+			border-left: 1px solid rgb(0, 0, 0, 0.1);
+		}
 	}
 
 	&--border_right {
@@ -147,11 +177,12 @@
 	}
 
 	&::before {
-		content: var(--navigation-link-icon-on, initial);
+		content: var(--navigation-link-icon-on, none);
 		display: block;
+		margin-inline: -46px 24px;
 		width: 22px;
 		height: 22px;
-		padding: 0 30px;
+		padding: 0;
 		mask: var(--navigation-link-icon) no-repeat center / contain;
 		background-color: var(--main-color);
 		opacity: 0.2;
