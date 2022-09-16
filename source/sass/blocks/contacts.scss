@@ -92,6 +92,21 @@
 	line-height: 30px;
 }
 
+.contacts__email {
+	padding-bottom: 5px;
+	border-bottom: 1px solid var(--accent-color);
+
+	&:hover {
+		color: var(--extra-dark-accent-color);
+		border-color: var(--extra-dark-accent-color);
+	}
+
+	&:active {
+		color: var(--extra-dark-accent-color);
+		border-color: rgb(70, 193, 174, 0.1);
+	}
+}
+
 .contacts__map-wrapper {
 	margin: 20px 0;
 
