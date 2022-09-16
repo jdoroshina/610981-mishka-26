@@ -12,6 +12,14 @@
 	text-decoration: none;
 	text-transform: uppercase;
 
+	&:hover {
+		color: var(--major-color);
+		background-color: var(--base-color);
+	}
+
+	&:active {
+		color: rgb(255, 255, 255, 0.3);
+	}
 
 	&--main {
 		width: 100%;
@@ -30,6 +38,18 @@
 		color: var(--major-color);
 		background-color: var(--light-accent-color);
 		border: 2px solid var(--light-accent-color);
+
+		&:hover {
+			color: var(--major-color);
+			background-color: var(--extra-dark-accent-color);
+			border: 2px solid var(--extra-dark-accent-color);
+		}
+
+		&:active {
+			color: var(--dark-minor-color);
+			background-color: var(--extra-dark-accent-color);
+			border: 2px solid var(--extra-dark-accent-color);
+		}
 	}
 
 	&--small {
