@@ -1,12 +1,9 @@
 .button {
-	--font-size: 18px;
-	--line-height: 20px;
-
 	display: inline-block;
 	box-sizing: border-box;
 	font-family: inherit;
-	font-size: var(--font-size);
-	line-height: var(--line-height);
+	font-size: 18px;
+	line-height: 20px;
 	font-weight: 700;
 	text-align: center;
 	color: var(--base-color);
@@ -23,7 +20,7 @@
 		border: 2px solid var(--base-color);
 
 		@media #{$not-mobile} {
-			--font-size: 17px;
+			font-size: 17px;
 		}
 	}
 
@@ -37,17 +34,17 @@
 
 	&--small {
 		padding: 18px 0;
-		--font-size: 17px;
-		--line-height: 16px;
+		font-size: 17px;
+		line-height: 16px;
 	}
 
 	&--compact {
 		padding: 18px 0;
-		font-size: var(--font-size);
-		--line-height: 16px;
+		font-size: 18px;
+		line-height: 16px;
 
 		@media #{$not-mobile} {
-			--font-size: 17px;
+			font-size: 17px;
 		}
 	}
 }
