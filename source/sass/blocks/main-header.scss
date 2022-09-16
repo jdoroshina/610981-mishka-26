@@ -13,7 +13,7 @@
 	}
 
 	@media #{$desktop-only} {
-		grid-template-columns: repeat(3, auto);
+		grid-template-columns: 1fr auto 1fr;
 	}
 
 	&::before {
@@ -33,6 +33,7 @@
 .main-header__logo {
 	grid-area: 1 / 1 / 2 / 2;
 	justify-self: center;
+	align-self: start;
 
 	@media #{$mobile-only} {
 		padding-top: 22px;
@@ -41,12 +42,13 @@
 
 	@media #{$tablet-only} {
 		justify-self: start;
+		margin-block-start: 18px;
 	}
 
 	@media #{$desktop-only} {
-		grid-column: 2 / span 1;
-		grid-row: 1 / span 1;
+		grid-area: 1 / 2 / 2 / 3;
 		justify-self: center;
+		margin-block-start: 9px;
 	}
 }
 

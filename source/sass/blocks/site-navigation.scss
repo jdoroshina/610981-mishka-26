@@ -1,3 +1,31 @@
+.site-navigation {
+	@media #{$desktop-only} {
+		position: relative;
+		margin-inline-start: -35px;
+		gap: 1px;
+
+		&::after {
+			content: "";
+			position: absolute;
+			z-index: 2;
+			top: 0;
+			bottom: 0;
+			left: -1px;
+			width: 1px;
+			background: var(--major-color);
+		}
+	}
+}
+
+.site-navigation__item {
+	@media #{$desktop-only} {
+		padding-inline: 35px;
+		box-shadow:
+			-0.5px 0.5px 0 0.5px var(--middle-minor-color),
+			0 0 0 0 var(--major-color);
+	}
+}
+
 .site-navigation__link {
 	@media #{$tablet-only} {
 		--header-link-padding: 21px;
