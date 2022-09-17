@@ -20,6 +20,15 @@
 	}
 }
 
+.slider__buttons {
+	display: grid;
+    grid-auto-flow: column;
+
+	@media #{$not-mobile} {
+		gap: 37px;
+	}
+}
+
 .slider__button {
 	width: 50px;
 	height: 26px;
