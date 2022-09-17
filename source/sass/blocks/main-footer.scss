@@ -25,4 +25,17 @@
 	@media #{$not-mobile} {
 		display: flex;
 	}
+
+	&:hover {
+		fill: var(--extra-dark-accent-color);
+	}
+
+	&:active {
+		fill: var(--extra-dark-accent-color);
+		opacity: 0.3;
+	}
+}
+
+.main-footer__logo-image {
+	fill: inherit;
 }
