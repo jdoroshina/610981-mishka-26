@@ -18,13 +18,24 @@
 }
 
 .copyright__link {
+	background-color: var(--light-accent-color);
+
+	&:hover {
+		background-color: var(--extra-dark-accent-color);
+	}
+
+	&:active {
+		background-color: var(--extra-dark-accent-color);
+		opacity: 0.3;
+	}
+
 	&::before {
 		content: "";
 		position: absolute;
 		width: 36px;
 		height: 36px;
 		margin-left: 27px;
-		background-color: var(--light-accent-color);
+		background-color: inherit;
 		mask: url("../../icons/stack.svg#htmlacademy") no-repeat center / contain;
 		transform: translateY(-25%);
 	}
