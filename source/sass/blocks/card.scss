@@ -14,6 +14,14 @@
 	@media #{$desktop-only} {
 		--card-content-margin: 30px;
 	}
+
+	&:hover {
+		box-shadow: var(--middle-shadow);
+	}
+
+	&:active {
+		box-shadow: var(--small-shadow);
+	}
 }
 
 .card__link {
