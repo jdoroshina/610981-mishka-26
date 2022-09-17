@@ -1,8 +1,16 @@
 .field {
+	--field-border-color: var(--main-color);
+	--field-icon-opacity: 0.2;
 	display: grid;
 	grid-template-columns: auto 1fr;
 	align-items: center;
 	column-gap: 23px;
+
+	&:hover,
+	&:active {
+		--field-border-color: var(--accent-color);
+		--field-icon-opacity: 1;
+	}
 }
 
 .field__input {
@@ -17,7 +25,7 @@
 	color: var(--base-color);
 	background-color: inherit;
 	border: none;
-	border-bottom: 2px solid var(--main-color);
+	border-bottom: 2px solid var(--field-border-color);
 	resize: vertical;
 
 	@media #{$not-mobile} {
@@ -28,7 +36,7 @@
 
 	&--border_full {
 		padding: 17px;
-		border: 2px solid var(--main-color);
+		border: 2px solid var(--field-border-color);
 	}
 
 	&::placeholder {
@@ -44,9 +52,9 @@
 	pointer-events: none;
 	width: 32px;
 	height: 32px;
-	background-color: var(--main-color);
+	background-color: var(--field-border-color, var(--main-color));
 	mask: var(--input-field-icon) no-repeat center / contain;
-	opacity: 0.2;
+	opacity: var(--field-icon-opacity);
 
 	&--phone {
 		--input-field-icon: url("../../icons/stack.svg#phone");
