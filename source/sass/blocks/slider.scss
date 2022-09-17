@@ -30,17 +30,13 @@
 }
 
 .slider__button {
-	width: 50px;
-	height: 26px;
 	padding: 13px 40px;
-	box-sizing: border-box;
-	mask: url("../../icons/stack.svg#big-arrow") no-repeat center / contain;
-	background-color: var(--main-color);
+	background-color: inherit;
 	border: 1px solid var(--dark-minor-color);
-	transform: translateZ(0);
-
+	box-sizing: border-box;
 
 	@media #{$not-mobile} {
+		padding: 0;
 		border: none;
 	}
 
@@ -54,5 +50,15 @@
 
 	&--back {
 		transform: rotate(180deg);
+	}
+
+	&::before {
+		content: "";
+		display: block;
+		width: 50px;
+		height: 26px;
+		background-color: var(--main-color);
+		mask: url("../../icons/stack.svg#big-arrow") no-repeat center / contain;
+		transform: translateZ(0);
 	}
 }
