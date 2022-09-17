@@ -16,11 +16,16 @@
 	}
 }
 
-.card__title {
-	margin-top: 28px;
-	margin-right: var(--card-content-margin);
-	margin-bottom: 5px;
-	margin-left: var(--card-content-margin);
+.card__link {
+	color: var(--main-color);
+
+	&:hover {
+		color: var(--light-dull-main-color);
+	}
+
+	&:active {
+		color: var(--extra-dull-main-color);
+	}
 }
 
 .card__link-image {
@@ -30,6 +35,15 @@
 		grid-row: 1 / -1;
 	}
 }
+
+.card__title {
+	margin-top: 28px;
+	margin-right: var(--card-content-margin);
+	margin-bottom: 5px;
+	margin-left: var(--card-content-margin);
+	color: inherit;
+}
+
 
 .card__image {
 	display: block;
