@@ -22,7 +22,7 @@
 
 .slider__buttons {
 	display: grid;
-    grid-auto-flow: column;
+	grid-auto-flow: column;
 
 	@media #{$not-mobile} {
 		gap: 37px;
