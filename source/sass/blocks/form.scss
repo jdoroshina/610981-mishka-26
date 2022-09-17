@@ -36,7 +36,16 @@
 }
 
 .form__control {
+	--modal-control-border-color: rgba(68, 68, 68, 0.1);
 	display: grid;
+
+	&:hover {
+		--modal-control-border-color: rgba(68, 68, 68, 0.3);
+	}
+
+	&:active {
+		--modal-control-border-color: var(--accent-color);
+	}
 }
 
 .form__input {
@@ -56,7 +65,7 @@
 		display: block;
 		width: var(--radio-input-width, 82px);
 		height: 52px;
-		border: 2px solid var(--checked-radio-border-color, rgb(68, 68, 68, 0.1));
+		border: 2px solid var(--checked-radio-border-color, var(--modal-control-border-color));
 		box-sizing: border-box;
 	}
 }
