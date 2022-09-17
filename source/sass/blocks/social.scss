@@ -26,6 +26,17 @@
 }
 
 .social__link {
+	background-color: var(--light-main-color);
+
+	&:hover {
+		background-color: var(--extra-dark-accent-color);
+	}
+
+	&:active {
+		background-color: var(--extra-dark-accent-color);
+		opacity: 0.3;
+	}
+
 	&--tg {
 		--social-icon: url("../../icons/stack.svg#social_tg");
 	}
@@ -43,7 +54,7 @@
 		display: block;
 		width: 28px;
 		height: 28px;
-		background-color: var(--light-main-color);
+		background-color: inherit;
 		mask: var(--social-icon) no-repeat center / contain;
 	}
 }
