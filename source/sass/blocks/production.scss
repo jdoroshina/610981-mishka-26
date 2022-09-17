@@ -17,6 +17,14 @@
 		column-gap: 23px;
 		margin-bottom: 105px;
 	}
+
+	&:hover {
+		box-shadow: var(--middle-shadow);
+	}
+
+	&:active {
+		box-shadow: var(--small-shadow);
+	}
 }
 
 .production__title {
