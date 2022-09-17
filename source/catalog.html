@@ -65,9 +65,12 @@
 	</section>
 	<section class="production page__centerer">
 		<h2 class="production__title heading heading--level_5">Процесс производства</h2>
-		<a class="production__link video" href="javascript:undefined;">
-			{% include "./templates/picture.twig" with {name: "video", class: "video__image"} %}
-		</a>
+		<div class="production__video-wrapper video">
+			<a class="video__link" href="javascript:undefined;">
+				{% include "./templates/picture.twig" with {name: "video", class: "video__image"} %}
+			</a>
+			<button class="video__button" type="button" aria-label="Воспроизвести видео"></button>
+		</div>
 		<div class="production__description content">
 			<p>По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
 		</div>

@@ -1,19 +1,20 @@
 .video {
 	position: relative;
+}
 
-	&::before {
-		content: "";
-		position: absolute;
-		display: block;
-		width: 110px;
-		height: 110px;
-		background: url("../../icons/stack.svg#play") no-repeat center / contain;
+.video__link {
+	@media #{$not-mobile} {
+		order: -1;
+	}
+
+	@media #{$desktop-only} {
+		grid-row: 1 / -1;
 	}
 }
 
 .video__image {
-	display: block;
 	background-color: var(--dark-minor-color);
+	object-fit: cover;
 
 	@media #{$tablet-only} {
 		width: 668px;
@@ -21,10 +22,31 @@
 	}
 
 	@media #{$desktop-only} {
-		width: 683px;
+		min-width: 683px;
 		height: 455px;
 	}
 }
 
+.video__button {
 	--video-button-width: 116px;
 	--video-button-height: 116px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: var(--video-button-width);
+	height: var(--video-button-height);
+	background: url("../../icons/stack.svg#play") no-repeat center / contain;
+	border: none;
+	transform: translate(-50%, -50%);
+
+	&:hover {
+		width: calc(var(--video-button-width) * 1.2);
+		height: calc(var(--video-button-height) * 1.2);
+	}
+
+	&:active {
+		width: calc(var(--video-button-width) * 0.8);
+		height: calc(var(--video-button-height) * 0.8);
+		opacity: 0.3;
+	}
+}

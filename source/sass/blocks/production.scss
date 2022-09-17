@@ -69,16 +69,6 @@
 	}
 }
 
-.production__link {
-	@media #{$not-mobile} {
-		order: -1;
-	}
-
-	@media #{$desktop-only} {
-		grid-row: 1 / -1;
-	}
-}
-
 .production__description {
 	margin-right: var(--production-content-centerer);
 	margin-left: var(--production-content-centerer);
