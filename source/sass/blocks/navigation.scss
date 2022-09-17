@@ -153,6 +153,18 @@
 		padding-inline-start: 46px;
 	}
 
+	&:hover {
+		--navigation-icon-background: var(--light-accent-color);
+		--navigation-icon-opacity: 1;
+		color: var(--light-dull-main-color);
+	}
+
+	&:active {
+		--navigation-icon-background: var(--light-accent-color);
+		--navigation-icon-opacity: 0.3;
+		color: var(--extra-dull-main-color);
+	}
+
 	&--icon_on {
 		--navigation-link-icon-on: "";
 
@@ -183,8 +195,8 @@
 		height: 22px;
 		padding: 0;
 		mask: var(--navigation-link-icon) no-repeat center / contain;
-		background-color: var(--main-color);
-		opacity: 0.2;
+		background-color: var(--navigation-icon-background, var(--main-color));
+		opacity: var(--navigation-icon-opacity, 0.2);
 	}
 }
 
