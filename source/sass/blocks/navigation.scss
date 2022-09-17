@@ -194,8 +194,8 @@
 		width: 22px;
 		height: 22px;
 		padding: 0;
-		mask: var(--navigation-link-icon) no-repeat center / contain;
 		background-color: var(--navigation-icon-background, var(--main-color));
+		mask: var(--navigation-link-icon) no-repeat center / contain;
 		opacity: var(--navigation-icon-opacity, 0.2);
 	}
 }

@@ -77,13 +77,23 @@
 }
 
 .card__button {
+	&:hover {
+		--card-icon-background: var(--light-accent-color);
+		--card-icon-opacity: 1;
+	}
+
+	&:active {
+		--card-icon-background: var(--light-accent-color);
+		--card-icon-opacity: 0.3;
+	}
+
 	&::before {
 		content: "";
 		display: block;
 		width: 20px;
 		height: 19px;
-		background-color: var(--main-color);
+		background-color: var(--card-icon-background, var(--main-color));
 		mask: url("../../icons/stack.svg#cart") no-repeat center / contain;
-		opacity: 0.2;
+		opacity: var(--card-icon-opacity, 0.2);
 	}
 }
