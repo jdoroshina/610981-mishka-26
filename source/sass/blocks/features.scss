@@ -6,6 +6,8 @@
 	--column-count: 1;
 	display: grid;
 	grid-template-columns: repeat(var(--column-count), 1fr);
+	margin-top: 0;
+	margin-bottom: 0;
 	padding: 0;
 
 	@media #{$not-mobile} {
