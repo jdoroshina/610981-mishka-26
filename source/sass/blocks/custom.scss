@@ -3,6 +3,20 @@
 	background-image: none;
 }
 
+.custom__title {
+	margin: 0;
+	padding: 72px 0;
+	text-align: center;
+
+	@media #{$tablet-only} {
+		padding: 89px 0;
+	}
+
+	@media #{$desktop-only} {
+		padding: 95px 0;
+	}
+}
+
 .custom__text {
 	margin-top: 17px;
 	margin-bottom: 17px;

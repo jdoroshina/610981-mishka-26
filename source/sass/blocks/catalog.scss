@@ -3,6 +3,20 @@
 	background-image: none;
 }
 
+.catalog__title {
+	margin: 0;
+	padding: 72px 0;
+	text-align: center;
+
+	@media #{$tablet-only} {
+		padding: 89px 0;
+	}
+
+	@media #{$desktop-only} {
+		padding: 95px 0;
+	}
+}
+
 .catalog__cards {
 	margin-top: 30px;
 	margin-bottom: 30px;
