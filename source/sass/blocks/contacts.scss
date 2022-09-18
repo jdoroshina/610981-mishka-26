@@ -76,6 +76,12 @@
 	display: grid;
 	grid-template-columns: auto 1fr;
 	column-gap: 35px;
+	font-size: 14px;
+	line-height: 30px;
+
+	@media #{$not-mobile} {
+		font-size: 17px;
+	}
 
 	@media #{$tablet-only} {
 		grid-template-columns: auto 1fr;
@@ -83,13 +89,8 @@
 	}
 }
 
-.contacts__name {
-	line-height: 30px;
-}
-
 .contacts__value {
 	margin-left: 0;
-	line-height: 30px;
 }
 
 .contacts__email {
