@@ -2,17 +2,8 @@
 	position: relative;
 }
 
-.video__link {
-	@media #{$not-mobile} {
-		order: -1;
-	}
-
-	@media #{$desktop-only} {
-		grid-row: 1 / -1;
-	}
-}
-
 .video__image {
+	display: block;
 	background-color: var(--dark-minor-color);
 	object-fit: cover;
 

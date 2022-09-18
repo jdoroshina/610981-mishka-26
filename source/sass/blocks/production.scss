@@ -1,17 +1,21 @@
 .production {
-	--production-content-centerer: 33px;
-
+	--production-side-indent: 0;
 	display: grid;
 	margin-bottom: 58px;
 	border: 1px solid var(--dark-minor-color);
+	padding-left: var(--production-side-indent);
+	padding-right: var(--production-side-indent);
+
+	@media #{$mobile-only} {
+		--production-side-indent: 34px;
+	}
 
 	@media #{$tablet-only} {
-		--production-content-centerer: 42px;
+		--production-side-indent: 42px;
 		margin-bottom: 64px;
 	}
 
 	@media #{$desktop-only} {
-		--production-content-centerer: 57px;
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: repeat(3, auto);
 		column-gap: 23px;
@@ -32,9 +36,7 @@
 	align-items: center;
 	gap: 25px;
 	margin-top: 22px;
-	margin-right: var(--production-content-centerer);
 	margin-bottom: 26px;
-	margin-left: var(--production-content-centerer);
 
 	@media #{$mobile-only} {
 		justify-self: center;
@@ -52,12 +54,15 @@
 	}
 
 	@media #{$desktop-only} {
+		--production-side-indent: 57px;
 		flex-direction: column;
 		align-items: flex-start;
 		gap: 27px;
 		max-width: min-content;
 		margin-top: 47px;
 		margin-bottom: 19px;
+		padding-left: var(--production-side-indent);
+		padding-right: var(--production-side-indent);
 	}
 
 	&::before {
@@ -69,13 +74,35 @@
 	}
 }
 
+.production__video-wrapper {
+	justify-self: center;
+
+	@media #{$not-mobile} {
+		order: -1;
+	}
+
+	@media #{$not-desktop} {
+		margin-left: calc(-1 * var(--production-side-indent));
+		margin-right: calc(-1 * var(--production-side-indent));
+	}
+
+	@media #{$desktop-only} {
+		grid-row: 1 / -1;
+		grid-column: 1 / 2;
+	}
+}
+
 .production__description {
-	margin-right: var(--production-content-centerer);
-	margin-left: var(--production-content-centerer);
+	--production-side-indent: 57px;
 	font-size: 13px;
 
 	@media #{$mobile-only} {
 		margin-top: 27px;
+	}
+
+	@media #{$desktop-only} {
+		padding-left: var(--production-side-indent);
+		padding-right: var(--production-side-indent);
 	}
 
 	& p {
@@ -84,13 +111,13 @@
 }
 
 .production__button {
+	--production-side-indent: 57px;
 	justify-self: center;
 	max-width: max-content;
-	margin-right: var(--production-content-centerer);
 	margin-top: 33px;
-	margin-left: var(--production-content-centerer);
 	margin-bottom: 33px;
 	padding: 18px 11px;
+	box-sizing: border-box;
 
 	@media #{$tablet-only} {
 		max-width: 100%;
@@ -100,7 +127,9 @@
 
 	@media #{$desktop-only} {
 		margin-top: 43px;
-		margin-bottom: 60px;
+		margin-right: var(--production-side-indent);
+		margin-bottom: 47px;
+		margin-left: var(--production-side-indent);
 		padding: 18px 30px;
 	}
 }
