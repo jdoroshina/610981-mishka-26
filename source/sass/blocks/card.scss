@@ -1,10 +1,10 @@
 .card {
 	--card-content-margin: 28px;
-
 	display: grid;
+	justify-self: center;
 	border: 1px solid var(--dark-minor-color);
 
-	@media #{$tablet-only} {
+	@media (min-width: 465px) and (max-width: 768px) {
 		--card-content-margin: 33px;
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: auto auto 1fr auto;
@@ -37,9 +37,10 @@
 }
 
 .card__link-image {
+	justify-self: center;
 	order: -1;
 
-	@media #{$tablet-only} {
+	@media (min-width: 465px) and (max-width: 768px) {
 		grid-row: 1 / -1;
 	}
 }
@@ -56,13 +57,14 @@
 .card__image {
 	display: block;
 	background-color: var(--dark-minor-color);
+	object-fit: cover;
 
-	@media #{$tablet-only} {
+	@media (min-width: 465px) and (max-width: 768px) {
 		width: 334px;
 		height: 334px;
 	}
 
-	@media #{$desktop-only} {
+	@media (min-width: 769px) {
 		width: 316px;
 		height: 462px;
 	}
@@ -88,7 +90,7 @@
 	padding-bottom: 26px;
 	border-top: 1px solid var(--dark-minor-color);
 
-	@media #{$tablet-only} {
+	@media (min-width: 465px) and (max-width: 768px) {
 		grid-row: span 1 / -1;
 	}
 }
