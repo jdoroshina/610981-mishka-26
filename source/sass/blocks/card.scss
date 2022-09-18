@@ -51,6 +51,10 @@
 	margin-bottom: 5px;
 	margin-left: var(--card-content-margin);
 	color: inherit;
+
+	@media #{$mobile-only} {
+		max-width: 205px;
+	}
 }
 
 
