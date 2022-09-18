@@ -23,7 +23,7 @@
 
 	{% include "./footer.twig" %}
 
-	{% include "./modal.twig" %}
+	{% if permalink != "form.html"%} {% include "./modal.twig" %} {% endif %}
 </body>
 
 </html>
