@@ -16,6 +16,10 @@
 		grid-template-columns: 1fr auto 1fr;
 	}
 
+	&--theme_hero {
+		--bottom-menu-background-color: var(--light-minor-color);
+	}
+
 	&::before {
 		content: var(--has-shadow, none);
 		position: absolute;
@@ -104,9 +108,9 @@
 		bottom: 0;
 		right: calc(100vw - var(--content-indent));
 		width: 100vw;
-		background-color: var(--light-minor-color);
+		background-color: var(--bottom-menu-background-color, var(--minor-color));
 		box-shadow:
-			100vw 0 0 0 var(--light-minor-color),
+			100vw 0 0 0 var(--bottom-menu-background-color, var(--minor-color)),
 			100vw -1px 0 0 var(--middle-minor-color);
 		z-index: -1;
 	}
