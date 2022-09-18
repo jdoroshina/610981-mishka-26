@@ -2,20 +2,29 @@
 	--field-border-color: var(--main-color);
 	--field-icon-opacity: 0.2;
 	display: grid;
-	grid-template-columns: auto 1fr;
-	align-items: center;
+	align-items: baseline;
 	column-gap: 23px;
+
+	@media #{$not-mobile} {
+		grid-template-columns: auto 1fr;
+	}
 
 	&:hover,
 	&:active {
 		--field-border-color: var(--accent-color);
 		--field-icon-opacity: 1;
 	}
+
+	&--no-label {
+		@media #{$not-mobile} {
+			grid-template-columns: 167px 1fr;
+		}
+	}
 }
 
 .field__input {
-	grid-column: 2 / -1;
-	grid-row: 1 / 2;
+	grid-row: 2 / 3;
+	grid-column: 1 / 2;
 	padding: 17px 0;
 	padding-right: 50px;
 	box-sizing: border-box;
@@ -29,6 +38,8 @@
 	resize: vertical;
 
 	@media #{$not-mobile} {
+		grid-column: 2 / -1;
+		grid-row: 1 / 2;
 		padding: 17px;
 		font-size: 19px;
 		line-height: 25px;
@@ -46,8 +57,8 @@
 }
 
 .field__input-icon {
-	grid-column: 2 / -1;
-	grid-row: 1 / 2;
+	grid-row: 2 / 3;
+	grid-column: 1 / 2;
 	justify-self: end;
 	pointer-events: none;
 	width: 32px;
@@ -55,6 +66,11 @@
 	background-color: var(--field-border-color, var(--main-color));
 	mask: var(--input-field-icon) no-repeat center / contain;
 	opacity: var(--field-icon-opacity);
+
+	@media #{$not-mobile} {
+		grid-column: 2 / -1;
+		grid-row: 1 / 2;
+	}
 
 	&--phone {
 		--input-field-icon: url("../../icons/stack.svg#phone");

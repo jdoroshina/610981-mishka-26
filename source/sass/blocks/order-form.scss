@@ -49,6 +49,7 @@
 
 .order-form__group {
 	display: grid;
+	align-items: baseline;
 
 	@media #{$mobile-only} {
 		&--gap_xs {
