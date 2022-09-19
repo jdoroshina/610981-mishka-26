@@ -3,7 +3,8 @@
 	padding: 15px 0;
 
 	@media #{$tablet-only} {
-		padding: 25px 0;
+		margin-bottom: 18px;
+		padding: 0;
 	}
 
 	@media #{$desktop-only} {
@@ -17,7 +18,10 @@
 
 .contacts__content {
 	display: grid;
-	margin-bottom: 30px;
+
+	@media #{$mobile-only} {
+		margin-bottom: 30px;
+	}
 }
 
 .contacts__title {
@@ -25,8 +29,8 @@
 	margin: 0;
 
 	@media #{$tablet-only} {
-		margin-top: 43px;
-		margin-bottom: 25px;
+		margin-top: 10px;
+		margin-bottom: 9px;
 	}
 
 	@media #{$desktop-only} {
@@ -42,8 +46,8 @@
 
 		@media #{$tablet-only} {
 			position: absolute;
-			right: 50px;
-			bottom: -15px;
+			right: -15px;
+			bottom: -9px;
 		}
 
 		@media #{$desktop-only} {
@@ -62,7 +66,6 @@
 
 	@media #{$tablet-only} {
 		grid-template-columns: repeat(2, 1fr);
-		column-gap: 50px;
 		margin: 24px 0;
 	}
 
@@ -112,7 +115,7 @@
 	margin: 6px 0;
 
 	@media #{$tablet-only} {
-		margin: 32px 0;
+		margin: 7px 0;
 	}
 
 	@media #{$desktop-only} {
@@ -152,9 +155,9 @@
 	margin: 24px 0;
 
 	@media #{$tablet-only} {
-		margin: 24px 0;
-		padding-right: 27px;
-		padding-left: 27px;
+		margin: 38px 0;
+		padding-right: 40px;
+		padding-left: 40px;
 	}
 
 	@media #{$desktop-only} {

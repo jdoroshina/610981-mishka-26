@@ -30,6 +30,7 @@
 		--divider-shape: url("../../icons/stack.svg#sin");
 
 		@media #{$not-mobile} {
+			--section-gap: 0px;
 			--shape-size: 38.4px;
 			--divider-altitude: 17px;
 		}

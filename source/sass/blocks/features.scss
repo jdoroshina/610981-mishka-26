@@ -83,6 +83,11 @@
 .features__toys {
 	&::after {
 		mask-image: url("../../icons/stack.svg#lego");
+		margin-right: var(--features-icon-indent);
+	}
+
+	@media #{$tablet-only} {
+		--features-icon-indent: 33px;
 	}
 }
 

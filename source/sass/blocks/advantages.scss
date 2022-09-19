@@ -8,12 +8,11 @@
 
 .advantages__title {
 	margin-top: 33px;
-	margin-right: 31px;
 	margin-bottom: 20px;
 
 	@media #{$tablet-only} {
-		margin-right: 56px;
-		margin-bottom: 42px;
+		margin-top: 65px;
+		margin-bottom: 33px;
 	}
 
 	@media #{$desktop-only} {
@@ -30,7 +29,7 @@
 
 	@media #{$not-mobile} {
 		grid-template-columns: repeat(2, 1fr);
-		row-gap: 50px;
+		row-gap: 45px;
 	}
 
 	@media #{$desktop-only} {
@@ -39,9 +38,8 @@
 }
 
 .advantages__item {
-	max-width: 250px;
-
 	@media #{$not-mobile} {
+		max-width: 295px;
 		font-size: 20px;
 		line-height: 22px;
 	}
