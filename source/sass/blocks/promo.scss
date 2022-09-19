@@ -93,7 +93,7 @@
 .promo__description dl {
 	position: relative;
 	display: grid;
-	grid-template-columns: max-content auto;
+	grid-template-columns: auto 1fr;
 	row-gap: 26px;
 	column-gap: 30px;
 	margin: 27px 0;
