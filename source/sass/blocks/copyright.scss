@@ -20,14 +20,12 @@
 }
 
 .copyright__link {
-	background-color: var(--light-accent-color);
-
 	&:hover {
-		background-color: var(--extra-dark-accent-color);
+		--copyright-icon-color: var(--extra-dark-accent-color);
 	}
 
 	&:active {
-		background-color: var(--extra-dark-accent-color);
+		--copyright-icon-color: var(--extra-dark-accent-color);
 		opacity: 0.3;
 	}
 
@@ -36,7 +34,7 @@
 		display: block;
 		width: 36px;
 		height: 36px;
-		background-color: inherit;
+		background-color: var(--copyright-icon-color, var(--light-accent-color));
 		mask: url("../../icons/stack.svg#htmlacademy") no-repeat center / contain;
 	}
 }
