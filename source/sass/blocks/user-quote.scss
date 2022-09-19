@@ -9,6 +9,7 @@
 }
 
 .user-quote__author {
+	max-width: 350px;
 	margin: 11px 0;
 
 	@media #{$tablet-only} {
@@ -28,4 +29,12 @@
 	font-size: 17px;
 	line-height: 30px;
 	color: var(--base-color);
+
+	&:hover {
+		opacity: 0.6;
+	}
+
+	&:active {
+		opacity: 0.3;
+	}
 }

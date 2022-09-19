@@ -67,6 +67,7 @@
 
 .feedback__buttons-container {
 	margin: 19px 0;
+	z-index: 1;
 
 	@media #{$not-mobile} {
 		grid-column: -2 / -1;
@@ -81,6 +82,7 @@
 		grid-column: span 2 / -1;
 		grid-row: 1 / 2;
 		justify-self: end;
+		align-self: start;
 		max-width: 175px;
 	}
 
@@ -88,5 +90,6 @@
 		grid-column: -2 / -1;
 		grid-row: 1 / 2;
 		justify-self: end;
+		align-self: start;
 	}
 }
