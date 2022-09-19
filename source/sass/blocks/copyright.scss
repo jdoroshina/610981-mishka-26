@@ -1,7 +1,10 @@
 .copyright {
-	display: flex;
-	justify-content: center;
+	display: grid;
+	grid-auto-flow: column;
 	align-items: center;
+	gap: 27px;
+	max-width: 250px;
+
 
 	@media #{$mobile-only} {
 		padding-top: 12px;
@@ -10,7 +13,6 @@
 
 .copyright__title {
 	margin: 0;
-	padding-right: 60px;
 
 	@media #{$mobile-only} {
 		margin: 17px 0;
@@ -31,12 +33,10 @@
 
 	&::before {
 		content: "";
-		position: absolute;
+		display: block;
 		width: 36px;
 		height: 36px;
-		margin-left: 27px;
 		background-color: inherit;
 		mask: url("../../icons/stack.svg#htmlacademy") no-repeat center / contain;
-		transform: translateY(-25%);
 	}
 }
