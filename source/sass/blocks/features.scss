@@ -68,6 +68,7 @@
 		justify-self: end;
 		width: 62px;
 		height: 62px;
+		margin-right: 25px;
 		background-color: var(--accidental-accent-color);
 		opacity: var(--icon-opacity, 0.5);
 	}
@@ -75,14 +76,12 @@
 
 .features__accessories {
 	&::after {
-		margin-right: 36px;
 		mask-image: url("../../icons/stack.svg#lamp");
 	}
 }
 
 .features__toys {
 	&::after {
-		margin-right: 31px;
 		mask-image: url("../../icons/stack.svg#lego");
 	}
 }

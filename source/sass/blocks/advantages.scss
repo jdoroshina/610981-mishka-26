@@ -7,8 +7,9 @@
 }
 
 .advantages__title {
+	margin-top: 33px;
 	margin-right: 31px;
-	margin-bottom: 28px;
+	margin-bottom: 20px;
 
 	@media #{$tablet-only} {
 		margin-right: 56px;
@@ -23,7 +24,7 @@
 
 .advantages__list {
 	display: grid;
-	row-gap: 22px;
+	row-gap: 18px;
 	margin: 0;
 	padding: 0;
 
@@ -84,7 +85,8 @@
 		display: block;
 		width: 56px;
 		height: 56px;
-		margin-bottom: 22px;
+		margin-bottom: 9px;
+		margin-left: -4px;
 		mask: var(--advantages-icon) no-repeat center / contain;
 		background-color: var(--light-accent-color);
 	}
