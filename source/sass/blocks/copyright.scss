@@ -4,11 +4,15 @@
 	justify-content: center;
 	justify-self: center;
 	align-items: center;
-	gap: 22px;
+	gap: 25px;
 	max-width: 250px;
 
 	@media #{$mobile-only} {
 		padding-top: 12px;
+	}
+
+	@media #{$not-mobile} {
+		gap: 22px;
 	}
 }
 
@@ -21,11 +25,7 @@
 }
 
 .copyright__link {
-	margin-right: -15px;
-
-	@media #{$not-mobile} {
-		margin-right: -5px;
-	}
+	margin-right: -5px;
 
 	&:hover {
 		--copyright-icon-color: var(--extra-dark-accent-color);

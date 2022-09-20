@@ -6,15 +6,15 @@
 .catalog__title {
 	margin-top: 0;
 	margin-bottom: 0;
-	padding: 72px 0;
+	padding: 73px 0;
 	text-align: center;
 
 	@media #{$tablet-only} {
-		padding: 89px 0;
+		padding: 36px 0 75px;
 	}
 
 	@media #{$desktop-only} {
-		padding: 95px 0;
+		padding: 35px 0 97px;
 	}
 }
 
@@ -35,7 +35,7 @@
 
 .catalog__list {
 	display: grid;
-	gap: 30px;
+	gap: 29px;
 	margin: 0;
 	padding: 0;
 

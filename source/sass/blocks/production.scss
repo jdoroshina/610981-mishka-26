@@ -7,7 +7,7 @@
 	padding-right: var(--production-side-indent);
 
 	@media #{$mobile-only} {
-		--production-side-indent: 34px;
+		--production-side-indent: 32px;
 	}
 
 	@media #{$tablet-only} {
@@ -108,9 +108,9 @@
 	--production-side-indent: 57px;
 	justify-self: center;
 	max-width: max-content;
-	margin-top: 33px;
-	margin-bottom: 33px;
-	padding: 18px 11px;
+	margin-top: 32px;
+	margin-bottom: 32px;
+	padding: 16px 20px;
 	box-sizing: border-box;
 
 	@media #{$tablet-only} {
