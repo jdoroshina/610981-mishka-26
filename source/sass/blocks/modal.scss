@@ -1,5 +1,6 @@
 .modal {
 	display: none;
+	overflow-x: scroll;
 
 	&--active {
 		display: block;

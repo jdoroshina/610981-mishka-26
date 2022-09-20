@@ -13,6 +13,7 @@
 
 	@media #{$desktop-only} {
 		--card-content-margin: 27px;
+		grid-template-rows: max-content max-content 1fr auto;
 	}
 
 	&:hover {
@@ -88,9 +89,13 @@
 		font-size: 15px;
 	}
 
+	@media #{$desktop-only} {
+		--card-content-margin-bottom: 12px;
+	}
+
 	& p {
 		margin-top: 0;
-		margin-bottom: 18px;
+		margin-bottom: var(--card-content-margin-bottom, 18px);
 	}
 }
 
@@ -107,7 +112,7 @@
 		grid-row: span 1 / -1;
 	}
 
-	@media (min-width: 769px) {
+	@media #{$not-desktop} and (min-width: 769px) {
 		align-items: stretch;
 		padding-bottom: 17px;
 	}
