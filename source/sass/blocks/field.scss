@@ -25,7 +25,7 @@
 .field__input {
 	grid-row: 2 / 3;
 	grid-column: 1 / 2;
-	padding: 17px 0;
+	padding: 17px 50px 10px 0;
 	padding-right: 50px;
 	box-sizing: border-box;
 	font-family: var(--main-font);
@@ -60,6 +60,7 @@
 	grid-row: 2 / 3;
 	grid-column: 1 / 2;
 	justify-self: end;
+	align-self: center;
 	pointer-events: none;
 	width: 32px;
 	height: 32px;
@@ -79,4 +80,8 @@
 	&--email {
 		--input-field-icon: url("../../icons/stack.svg#mail");
 	}
+}
+
+.field__textarea {
+	min-height: 142px;
 }

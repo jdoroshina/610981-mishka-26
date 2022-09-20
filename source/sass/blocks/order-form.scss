@@ -26,6 +26,7 @@
 
 .order-form__title {
 	color: var(--light-accent-color);
+	text-transform: uppercase;
 
 	@media #{$mobile-only} {
 		--title-decoration-line: "";
@@ -105,7 +106,7 @@
 
 .order-form__checkbox {
 	display: grid;
-	gap: 24px;
+	gap: 23px;
 
 	@media #{$tablet-only} {
 		grid-template-columns: repeat(2, 1fr);
@@ -136,6 +137,10 @@
 }
 
 .order-form__submit-container {
+	@media #{$mobile-only} {
+		margin-top: -26px;
+	}
+
 	@media #{$not-mobile} {
 		display: flex;
 		justify-content: space-between;
@@ -151,6 +156,7 @@
 .order-form__submit {
 	margin-top: 30px;
 	margin-bottom: 30px;
+	padding: 16px 0;
 
 	@media #{$tablet-only} {
 		max-width: 250px;
@@ -170,6 +176,8 @@
 }
 
 .order-form__note {
+	display: block;
+	padding-top: 10px;
 	font-size: 14px;
 	line-height: 16px;
 	order: 1;

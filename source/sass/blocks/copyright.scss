@@ -22,7 +22,7 @@
 .copyright__link {
 	margin-right: -15px;
 
-	@media #{$tnot-mobile} {
+	@media #{$not-mobile} {
 		margin-right: -5px;
 	}
 
