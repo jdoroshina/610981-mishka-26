@@ -6,6 +6,10 @@
 	gap: 21px;
 	align-items: center;
 
+	@media #{$tablet-only} {
+		gap: 28px;
+	}
+
 	&:hover {
 		--control-input-border-color: var(--accent-color);
 	}

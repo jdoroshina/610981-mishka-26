@@ -16,7 +16,14 @@
 	display: grid;
 	gap: 34px;
 
-	@media #{$not-mobile} {
+	@media #{$tablet-only} {
+		gap: 22px;
+		padding-top: 50px;
+		padding-bottom: 50px;
+		background-color: var(--minor-color);
+	}
+
+	@media #{$desktop-only} {
 		gap: 41px;
 		padding-top: 50px;
 		padding-bottom: 50px;
@@ -35,6 +42,10 @@
 		gap: 25px;
 	}
 
+	@media #{$tablet-only} {
+		margin-top: 18px;
+	}
+
 	@media #{$desktop-only} {
 		padding-left: 46px;
 	}
@@ -50,9 +61,10 @@
 
 .order-form__group {
 	display: grid;
-	align-items: baseline;
 
 	@media #{$mobile-only} {
+		align-items: baseline;
+
 		&--gap_xs {
 			gap: 5px;
 		}
@@ -127,7 +139,11 @@
 	display: grid;
 	gap: 22px;
 
-	@media #{$not-mobile} {
+	@media #{$tablet-only} {
+		gap: 23px;
+	}
+
+	@media #{$desktop-only} {
 		gap: 40px;
 	}
 }
@@ -159,11 +175,11 @@
 	padding: 16px 0;
 
 	@media #{$tablet-only} {
-		max-width: 250px;
-		margin-top: 53px;
+		max-width: 230px;
+		margin-top: 3px;
 		margin-bottom: 50px;
-		padding-right: 32px;
-		padding-left: 32px;
+		padding-right: 28px;
+		padding-left: 28px;
 	}
 
 	@media #{$desktop-only} {
@@ -183,6 +199,7 @@
 	order: 1;
 
 	@media #{$not-mobile} {
+		align-self: baseline;
 		max-width: 350px;
 		font-size: 17px;
 		line-height: 30px;
