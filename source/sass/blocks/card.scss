@@ -12,7 +12,7 @@
 	}
 
 	@media #{$desktop-only} {
-		--card-content-margin: 30px;
+		--card-content-margin: 27px;
 	}
 
 	&:hover {
@@ -105,6 +105,11 @@
 
 	@media (min-width: 465px) and (max-width: 768px) {
 		grid-row: span 1 / -1;
+	}
+
+	@media (min-width: 769px) {
+		align-items: stretch;
+		padding-bottom: 17px;
 	}
 }
 
