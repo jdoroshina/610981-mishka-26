@@ -6,8 +6,12 @@
 	gap: 21px;
 	align-items: center;
 
-	@media #{$tablet-only} {
+	@media #{$not-mobile} {
 		gap: 28px;
+	}
+
+	@media #{$desktop-only} {
+		grid-template-columns: min-content auto;
 	}
 
 	&:hover {

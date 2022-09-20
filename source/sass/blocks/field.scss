@@ -10,6 +10,10 @@
 		column-gap: 0;
 	}
 
+	@media #{$desktop-only} {
+		column-gap: 8px;
+	}
+
 	&:hover,
 	&:active {
 		--field-border-color: var(--accent-color);
@@ -17,7 +21,7 @@
 	}
 
 	&--user-name {
-		@media #{$tablet-only} {
+		@media #{$not-mobile} {
 			column-gap: 25px;
 		}
 	}
@@ -44,18 +48,10 @@
 	border-bottom: 2px solid var(--field-border-color);
 	resize: vertical;
 
-	@media #{$tablet-only} {
+	@media #{$not-mobile} {
 		grid-column: 2 / -1;
 		grid-row: 1 / 2;
 		padding: 13px;
-		font-size: 19px;
-		line-height: 25px;
-	}
-
-	@media #{$desktop-only} {
-		grid-column: 2 / -1;
-		grid-row: 1 / 2;
-		padding: 17px;
 		font-size: 19px;
 		line-height: 25px;
 	}
@@ -87,6 +83,10 @@
 		grid-column: 2 / -1;
 		grid-row: 1 / 2;
 		margin-right: 21px;
+	}
+
+	@media #{$desktop-only} {
+		margin-right: 4px;
 	}
 
 	&--phone {

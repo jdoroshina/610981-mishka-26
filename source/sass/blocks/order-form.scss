@@ -24,8 +24,8 @@
 	}
 
 	@media #{$desktop-only} {
-		gap: 41px;
-		padding-top: 50px;
+		gap: 22px;
+		padding-top: 47px;
 		padding-bottom: 50px;
 		background-color: var(--minor-color);
 	}
@@ -47,7 +47,8 @@
 	}
 
 	@media #{$desktop-only} {
-		padding-left: 46px;
+		margin-left: 60px;
+		margin-top: 20px;
 	}
 
 	&::after {
@@ -125,7 +126,9 @@
 	}
 
 	@media #{$desktop-only} {
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(3, auto);
+		justify-content: start;
+		gap: 23px 100px;
 	}
 }
 
@@ -139,12 +142,8 @@
 	display: grid;
 	gap: 22px;
 
-	@media #{$tablet-only} {
+	@media #{$not-mobile} {
 		gap: 23px;
-	}
-
-	@media #{$desktop-only} {
-		gap: 40px;
 	}
 }
 
@@ -183,11 +182,11 @@
 	}
 
 	@media #{$desktop-only} {
-		max-width: 250px;
-		margin-top: 50px;
+		max-width: 230px;
+		margin-top: 0;
 		margin-bottom: 50px;
-		padding-right: 17px;
-		padding-left: 17px;
+		padding-right: 28px;
+		padding-left: 28px;
 	}
 }
 
