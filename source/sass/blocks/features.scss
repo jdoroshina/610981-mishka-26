@@ -86,7 +86,7 @@
 		margin-right: var(--features-icon-indent);
 	}
 
-	@media #{$tablet-only} {
+	@media #{$not-mobile} {
 		--features-icon-indent: 33px;
 	}
 }

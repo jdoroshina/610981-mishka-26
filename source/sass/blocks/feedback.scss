@@ -1,4 +1,12 @@
 .feedback {
+	@include bg-image("feedback");
+
+	@media #{$tablet-only} {
+		background: var(--bg-image) no-repeat;
+	}
+}
+
+.feedback__wrapper {
 	display: grid;
 	margin-bottom: 26px;
 
@@ -16,9 +24,9 @@
 		grid-template-columns: repeat(5, 1fr);
 		grid-template-rows: repeat(6, auto);
 		margin-top: 50px;
-		margin-bottom: 68px;
+		margin-bottom: 42px;
 		padding-top: 58px;
-		padding-bottom: 72px;
+		padding-bottom: 108px;
 		padding-left: 175px;
 		box-sizing: border-box;
 		background: var(--bg-image) no-repeat;
@@ -92,5 +100,6 @@
 		grid-row: 1 / 2;
 		justify-self: end;
 		align-self: start;
+		margin: 23px 0;
 	}
 }

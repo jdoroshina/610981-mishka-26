@@ -4,6 +4,11 @@
 	@media #{$not-mobile} {
 		padding-bottom: 40px;
 	}
+
+	@media #{$desktop-only} {
+		padding-right: 175px;
+		padding-left: 175px;
+	}
 }
 
 .advantages__title {
@@ -16,8 +21,8 @@
 	}
 
 	@media #{$desktop-only} {
-		margin-right: 68px;
-		margin-bottom: 39px;
+		margin-top: 80px;
+		margin-bottom: 30px;
 	}
 }
 
@@ -30,10 +35,6 @@
 	@media #{$not-mobile} {
 		grid-template-columns: repeat(2, 1fr);
 		row-gap: 45px;
-	}
-
-	@media #{$desktop-only} {
-		padding: 0 175px;
 	}
 }
 

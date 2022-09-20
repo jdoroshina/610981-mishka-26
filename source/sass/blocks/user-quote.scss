@@ -2,10 +2,16 @@
 	margin: 7px 0 35px 0;
 	line-height: 30px;
 
-	@media #{$not-mobile} {
+	@media #{$tablet-only} {
 		font-size: 17px;
 		margin-top: 20px;
 		margin-bottom: 20px;
+	}
+
+	@media #{$desktop-only} {
+		font-size: 17px;
+		margin-top: 16px;
+		margin-bottom: 16px;
 	}
 }
 
@@ -20,8 +26,8 @@
 	}
 
 	@media #{$desktop-only} {
-		margin-top: 24px;
-		margin-bottom: 24px;
+		margin-top: 44px;
+		margin-bottom: 67px;
 	}
 }
 

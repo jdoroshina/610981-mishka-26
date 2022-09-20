@@ -16,6 +16,9 @@
 	@media #{$desktop-only} {
 		grid-template-columns: 120px 290px 1fr;
 		grid-template-rows: repeat(5, auto);
+		padding-top: 71px;
+		padding-bottom: 70px;
+		column-gap: 56px;
 	}
 }
 
@@ -73,7 +76,7 @@
 
 	@media #{$desktop-only} {
 		grid-column: 2 / span 1;
-		margin-bottom: 49px;
+		margin-bottom: 33px;
 	}
 }
 
@@ -103,7 +106,7 @@
 	}
 
 	@media #{$desktop-only} {
-		margin: 45px 0;
+		margin: 61px 0;
 	}
 }
 
