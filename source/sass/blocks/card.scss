@@ -55,6 +55,11 @@
 	@media #{$mobile-only} {
 		max-width: 205px;
 	}
+
+	@media #{$not-mobile} {
+		font-size: 20px;
+		margin-bottom: 8px;
+	}
 }
 
 
@@ -79,6 +84,10 @@
 	font-size: 13px;
 	line-height: 30px;
 
+	@media #{$not-mobile} {
+		font-size: 15px;
+	}
+
 	& p {
 		margin-top: 0;
 		margin-bottom: 18px;
@@ -102,6 +111,10 @@
 .card__price {
 	font-weight: 700;
 	color: var(--main-color);
+
+	@media #{$not-mobile} {
+		font-size: 17px;
+	}
 }
 
 .card__button {
@@ -118,8 +131,8 @@
 	&::before {
 		content: "";
 		display: block;
-		width: 20px;
-		height: 19px;
+		width: 22px;
+		height: 22px;
 		background-color: var(--card-icon-background, var(--main-color));
 		mask: url("../../icons/stack.svg#cart") no-repeat center / contain;
 		opacity: var(--card-icon-opacity, 0.2);
